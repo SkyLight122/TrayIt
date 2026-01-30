@@ -4,11 +4,13 @@ use Livewire\Component;
 use Livewire\Attributes\Computed;
 use App\Models\Bakery;
 
-new class extends Component
-{
+new class extends Component {
+    public $search = '';
+
     #[Computed]
-    public function bakeries(){
-        return Bakery::all();
+    public function users()
+    {
+        return Bakery::search($this->search)->get();
     }
 };
 ?>
