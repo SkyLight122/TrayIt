@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Database\Seeders\UserSeeder;
+use Database\Seeders\BakerySeeder;
 use Database\Seeders\CakeTypeSeeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -24,7 +26,10 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            CakeTypeSeeder::class
+            CakeTypeSeeder::class,
+            BakeryTypeSeeder::class,
+            UserSeeder::class,
+            BakerySeeder::class
         ]);
     }
 }

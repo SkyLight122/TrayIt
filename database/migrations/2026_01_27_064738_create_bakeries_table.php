@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('bakeries', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('name')->unique();
             $table->string('email')->unique();
             $table->string('phone_number')->unique();
@@ -20,7 +21,7 @@ return new class extends Migration
             $table->text('address');
             $table->foreignId('bakery_type_id')->constrained('bakery_types')->onDelete('restrict');
             $table->dateTime('pickup_date');
-            $table->string('logo_path');
+            $table->string('logo_path')->nullable();
             $table->integer('order_per_day');
             $table->timestamps();
             $table->softDeletes();
