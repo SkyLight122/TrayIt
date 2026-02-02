@@ -6,9 +6,17 @@
 
         <title>{{ $title ?? config('app.name') }}</title>
 
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+        <!-- JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         @livewireStyles
+        
     </head>
     <body>
         {{ $slot }}
