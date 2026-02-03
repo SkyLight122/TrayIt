@@ -70,7 +70,7 @@ new class extends Component {
 };
 ?>
 
-<div class="flex min-h-screen">
+<div class="flex min-h-screen max-h-screen">
     <div class="w-5/12 relative">
 
         <div class="swiper h-full z-0">
@@ -105,7 +105,7 @@ new class extends Component {
     {{-- fungsi z-0 z-10 z-20 ini gunanya untuk seperti layer jadi jika z-0 itu akan menjadi layer paling belakang --}}
 
 
-    <div class="w-7/12 flex flex-col justify-center items-center pt-8">
+    <div class="w-7/12 flex flex-col justify-center items-center min-h-screen">
         <div class="">
             <h1 class="font-bold font-[montserrat] text-4xl pb-2">Create your account</h1>
             <p class="text-[18px] font-[montserrat] text-center pb-6">Join Tray It and start your website easily.</p>
@@ -123,7 +123,7 @@ new class extends Component {
         </form>
 
         <div class="pt-6">
-            <p class="text-[18px] font-[montserrat] text-center pb-10 ">Have an account? 
+            <p class="text-[18px] font-[montserrat] text-center">Have an account? 
             <a href="/login" class="font-semibold text-[#1A76FF]">Login</a></p>
         </div>
     </div>

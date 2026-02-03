@@ -34,9 +34,9 @@ new class extends Component {
 };
 ?>
 
-<div class="flex min-h-screen">
+<div class="flex max-h-screen">
     <div class="w-5/12 relative">
-        
+
         <div class="swiper h-full z-0">
             <div class="swiper-wrapper">
 
@@ -54,7 +54,7 @@ new class extends Component {
 
             </div>
         </div>
-        
+
         <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none"></div>
 
         <div class="absolute top-10 left-8 text-white z-20">

@@ -3,7 +3,7 @@
     'type' => 'text'
 ])
 
-<div class="relative pb-6">
+<div class="relative pb-5">
     <label for="{{ $name }}" class="absolute top-2 left-4 text-[10px] text-gray-600 font-[montserrat]"> {{ $slot }} </label>
 
     <input

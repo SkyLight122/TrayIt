@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('bakery_id')->constrained('bakeries')->onDelete('restrict');
-            $table->integer('price');
             $table->text('description');
             $table->foreignId('cake_type_id')->constrained('cake_types')->onDelete('restrict');
             $table->boolean('preorder')->default(false);
