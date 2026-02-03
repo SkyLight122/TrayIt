@@ -94,12 +94,12 @@ new class extends Component {
         <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none"></div>
 
         <div class="absolute top-10 left-8 text-white z-20">
-            <h1 class="font-bold font-[montserrat] text-3xl pb-5">Tray It</h1>
+            <h1 class="font-bold text-3xl pb-5">Tray It</h1>
         </div>
         
         <div class="absolute bottom-10 left-8 text-white z-20">
-            <h1 class="font-bold font-[montserrat] text-5xl pb-5">Start your <br> journey with Tray It</h1>
-            <p class="text-[19px] font-[montserrat]">Discover all partner bakeries on our domain that <br> match your cravings.</p>
+            <h1 class="font-bold text-5xl pb-5">Start your <br> journey with Tray It</h1>
+            <p class="text-[19px]">Discover all partner bakeries on our domain that <br> match your cravings.</p>
         </div>
     </div>
     {{-- fungsi z-0 z-10 z-20 ini gunanya untuk seperti layer jadi jika z-0 itu akan menjadi layer paling belakang --}}
@@ -107,8 +107,8 @@ new class extends Component {
 
     <div class="w-7/12 flex flex-col justify-center items-center min-h-screen">
         <div class="">
-            <h1 class="font-bold font-[montserrat] text-4xl pb-2">Create your account</h1>
-            <p class="text-[18px] font-[montserrat] text-center pb-6">Join Tray It and start your website easily.</p>
+            <h1 class="font-bold text-4xl pb-2">Create your account</h1>
+            <p class="text-[18px] text-center pb-6">Join Tray It and start your website easily.</p>
         </div>
         
         <form wire:submit.prevent="register">
@@ -119,12 +119,12 @@ new class extends Component {
             <x-input name="email" type="email">Email</x-input>
             <x-input name="password" type="password">Password</x-input>
             <x-input name="confirm_password" type="confirm_password">Confirm password</x-input>
-            <button type="submit" class="py-4 px-[207px] rounded-xl bg-[#1A76FF] text-white font-semibold font-[montserrat]">Register</button>
+            <button type="submit" class="py-4 w-full rounded-xl bg-[#1A76FF] text-white font-semibold">Register</button>
         </form>
 
         <div class="pt-6">
-            <p class="text-[18px] font-[montserrat] text-center">Have an account? 
-            <a href="/login" class="font-semibold text-[#1A76FF]">Login</a></p>
+            <p class="text-[18px] text-center">Have an account? 
+            <a href="/login" class="font-bold text-[#1A76FF]">Login</a></p>
         </div>
     </div>
 </div>

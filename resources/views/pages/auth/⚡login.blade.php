@@ -58,12 +58,12 @@ new class extends Component {
         <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none"></div>
 
         <div class="absolute top-10 left-8 text-white z-20">
-            <h1 class="font-bold font-[montserrat] text-3xl pb-5">Tray It</h1>
+            <h1 class="font-bold text-3xl pb-5">Tray It</h1>
         </div>
         
         <div class="absolute bottom-10 left-8 text-white z-20">
-            <h1 class="font-bold font-[montserrat] text-5xl pb-5">Start your <br> journey with Tray It</h1>
-            <p class="text-[19px] font-[montserrat]">Discover all partner bakeries on our domain that <br> match your cravings.</p>
+            <h1 class="font-bold text-5xl pb-5">Start your <br> journey with Tray It</h1>
+            <p class="text-[19px]">Discover all partner bakeries on our domain that <br> match your cravings.</p>
         </div>
     </div>
 
@@ -73,20 +73,20 @@ new class extends Component {
 
     <div class="w-7/12 flex flex-col justify-center items-center">
         <div class="">
-            <h1 class="font-bold font-[montserrat] text-4xl pb-2">Welcome back to Tray it</h1>
-            <p class="text-[18px] font-[montserrat] text-center pb-6">Discover all partner bakeries on our <br> powerful domain.</p>
+            <h1 class="font-bold text-4xl pb-2">Welcome back to Tray it</h1>
+            <p class="text-[18px] text-center pb-6">Discover all partner bakeries on our <br> powerful domain.</p>
         </div>
         
         <form wire:submit.prevent="login">
         {{-- ikut function atasnya --}}
             <x-input name="email" type="email">Email</x-input>
             <x-input name="password" type="password">Password</x-input>
-            <button type="submit" class="py-4 px-[215px] rounded-xl bg-[#1A76FF] text-white font-semibold font-[montserrat]">Log in</button>
+            <button type="submit" class="py-4 w-full rounded-xl bg-[#1A76FF] text-white font-semibold">Log in</button>
         </form>
 
         <div class="pt-6">
-            <p class="text-[18px] font-[montserrat] text-center pb-10">Don’t have account yet? 
-            <a href="/register" class="font-semibold text-[#1A76FF]">Register</a></p>
+            <p class="text-[18px] text-center pb-10">Don’t have account yet? 
+            <a href="/register" class="font-bold text-[#1A76FF]">Register</a></p>
         </div>
     </div>
 </div>

@@ -4,7 +4,7 @@
 ])
 
 <div class="relative pb-5">
-    <label for="{{ $name }}" class="absolute top-2 left-4 text-[10px] text-gray-600 font-[montserrat]"> {{ $slot }} </label>
+    <label for="{{ $name }}" class="absolute top-2 left-4 text-[10px] text-gray-600"> {{ $slot }} </label>
 
     <input
         type="{{ $type }}"
@@ -13,7 +13,7 @@
         class="
         w-120
         px-4
-        pt-6
+        pt-5
         pb-2
         text-[15px]
         rounded-xl

@@ -13,66 +13,68 @@ new class extends Component
 };
 ?>
 
-<div class="bg-[#FFF8F0] min-h-screen">
-    <div>
-    <h1 class="text-[#88481E] font-[montserrat] font-semibold pl-15 pt-15 text-5xl">What are you <br> craving right now?</h1>
-    </div>
-
-    
-    <div class="absolute top-[70px] right-[60px] w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-        <img src="{{ asset('images/Savory.png') }}" class="w-12 h-12"/>
-    </div>
-
-    <div class="absolute top-[70px] right-[140px] w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-        <img src="{{ asset('images/Dessert.png') }}" class="w-12 h-12"/>
-    </div>
-
-    <div class="absolute top-[70px] right-[220px] w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-        <img src="{{ asset('images/Cookie.png') }}" class="w-12 h-13"/>
-    </div>
-
-    <div class="absolute top-[70px] right-[300px] w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-        <img src="{{ asset('images/Pastry.png') }}" class="w-12 h-12"/>
-    </div>
-
-    <div class="absolute top-[70px] right-[380px] w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-        <img src="{{ asset('images/Bread.png') }}" class="w-12 h-12"/>
-    </div>
-
-    <div class="absolute top-[70px] right-[460px] w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-        <img src="{{ asset('images/Cake.png') }}" class="w-9 h-12"/>
-    </div>
-
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" data-name="Cake">
-                <img src="/images/Cake.png" class="w-80 mx-auto">
+<div class="bg-[#FFF8F0] min-h-screen py-8">
+    <div class="flex items-center justify-between px-20">
+        <h1 class="text-[#88481E] font-semibold text-5xl">What are you <br> craving right now?</h1>
+        <div class="flex gap-2">
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/Cake.png') }}" class="w-9 h-12"/>
+            </div>
+            
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/Bread.png') }}" class="w-12 h-12"/>
             </div>
 
-            <div class="swiper-slide" data-name="Bread">
-                <img src="/images/Bread.png" class="w-100 mx-auto">
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/Pastry.png') }}" class="w-12 h-12"/>
             </div>
 
-            <div class="swiper-slide" data-name="Pastry">
-                <img src="/images/Pastry.png" class="w-95 mx-auto">
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/Cookie.png') }}" class="w-12 h-13"/>
             </div>
 
-            <div class="swiper-slide" data-name="Cookie">
-                <img src="/images/Cookie.png" class="w-105 mx-auto">
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/Dessert.png') }}" class="w-12 h-12"/>
             </div>
-
-            <div class="swiper-slide" data-name="Dessert">
-                <img src="/images/Dessert.png" class="w-100 mx-auto">
-            </div>
-
-            <div class="swiper-slide" data-name="Savory">
-                <img src="/images/Savory.png" class="w-110 mx-auto">
+            
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/Savory.png') }}" class="w-12 h-12"/>
             </div>
         </div>
     </div>
 
-    <div class="flex justify-center font-[montserrat] font-semibold">
-    <button id="categoryButton" class="mt-6 w-[160px] px-6 py-2 border-2 rounded-lg text-center text-[#88481E] border-[#88481E]">Cake</button>
+    
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-name="Cake">
+                <img src="/images/Cake.png" class="w-70 mx-auto">
+            </div>
+
+            <div class="swiper-slide" data-name="Bread">
+                <img src="/images/Bread.png" class="w-90 mx-auto">
+            </div>
+
+            <div class="swiper-slide" data-name="Pastry">
+                <img src="/images/Pastry.png" class="w-85 mx-auto">
+            </div>
+
+            <div class="swiper-slide" data-name="Cookie">
+                <img src="/images/Cookie.png" class="w-95 mx-auto">
+            </div>
+
+            <div class="swiper-slide" data-name="Dessert">
+                <img src="/images/Dessert.png" class="w-90 mx-auto">
+            </div>
+
+            <div class="swiper-slide" data-name="Savory">
+                <img src="/images/Savory.png" class="w-100 mx-auto">
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center font-semibold">
+        <button id="categoryButton" class="mt-6 w-40 px-6 py-2 border-2 rounded-lg text-center text-[#88481E] border-[#88481E] hover:bg-[#88481E] hover:text-[#FFF8F0]">Cake</button>
     </div>
 
 </div>
@@ -124,7 +126,7 @@ new class extends Component
             //ini buat bayangan
             blur: 10,
             //buat blur pada slide yang tidak aktif
-            scale: 0.9,
+            scale: 0.85,
             //ini buat jadiin slide yang tidak aktif menjadi lebih kecil
         },
         loop: true,
