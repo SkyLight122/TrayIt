@@ -47,6 +47,18 @@ class User extends Authenticatable
         return $this->belongsTo(CakeType::class);
     }
 
+    public function isAdmin(){
+        return (bool) $this->is_admin;
+    }
+
+    public function isBakeryOwner(int $id){
+        return $this->bakeries_users()->where('bakery_id', $id)->exists();
+    }
+
+    public function isCustomer(int $id){
+        return !$this->is_admin && ! $this->isBakeryOwner($id);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
