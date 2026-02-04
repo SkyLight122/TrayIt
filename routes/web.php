@@ -9,3 +9,4 @@ Route::get('/', function () {
 Route::livewire('/mood', 'pages::preparation.mood') -> name('mood');
 Route::livewire('/login', 'pages::auth.login')->name('login');
 Route::livewire('/register', 'pages::auth.register')->name('register');
+Route::livewire('/portal', 'pages::preparation.portal')->name('portal');
