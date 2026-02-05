@@ -8,7 +8,7 @@
     
     <div class="h-40 overflow-hidden">
         <img
-            src="{{ asset('storage/' . $image) }}"
+            src="{{ asset('assets/images/' . $image) }}"
             alt="{{ $title }}"
             class="w-full h-full object-cover"
         >

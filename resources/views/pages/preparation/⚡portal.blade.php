@@ -32,17 +32,17 @@ new class extends Component {
     <div class="swiper iklan-swiper w-345 h-140 mx-auto overflow-hidden rounded-2xl">
         <div class=" swiper-wrapper">
             <div class="swiper-slide">
-                <img src="{{ asset('storage/images/portal/iklan/Iklan.jpg') }}"
+                <img src="{{ asset(path: 'assets/images/portal/iklan/Iklan.jpg') }}"
                      class="w-full h-full object-cover object-center">
             </div>
 
             <div class="swiper-slide">
-                <img src="{{ asset('storage/images/portal/iklan/Iklan2.jpg') }}"
+                <img src="{{ asset('assets/images/portal/iklan/Iklan2.jpg') }}"
                      class="w-full h-full object-cover object-center">
             </div>
 
             <div class="swiper-slide">
-                <img src="{{ asset('storage/images/portal/iklan/Iklan3.jpg') }}"
+                <img src="{{ asset('assets/images/portal/iklan/Iklan3.jpg') }}"
                      class="w-full h-full object-cover object-center">
             </div>
         </div>
@@ -60,44 +60,44 @@ new class extends Component {
 
     <div class="flex justify-center gap-10 my-15">
         <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
-            <img class="size-7 group-hover:hidden" src="{{ asset('storage/images/filter-category/all-black.png') }}">
-            <img class="size-7 hidden group-hover:block" src="{{ asset('storage/images/filter-category/All-white.png') }}">
+            <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/all-black.png') }}">
+            <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/All-white.png') }}">
             <button class="">All</button>
         </div>
 
         <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
-            <img class="size-7 group-hover:hidden" src="{{ asset('storage/images/filter-category/Cake-black.png') }}">
-            <img class="size-7 hidden group-hover:block" src="{{ asset('storage/images/filter-category/cake-white.png') }}">
+            <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/Cake-black.png') }}">
+            <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/cake-white.png') }}">
             <button class="">Cake</button>
         </div>
 
         <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
-            <img class="size-7 group-hover:hidden" src="{{ asset('storage/images/filter-category/bread-black.png') }}">
-            <img class="size-7 hidden group-hover:block" src="{{ asset('storage/images/filter-category/bread-white.png') }}">
+            <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/bread-black.png') }}">
+            <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/bread-white.png') }}">
             <button class="">Bread</button>
         </div>
 
         <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
-            <img class="size-7 group-hover:hidden" src="{{ asset('storage/images/filter-category/pastry-black.png') }}">
-            <img class="size-7 hidden group-hover:block" src="{{ asset('storage/images/filter-category/pastry-white.png') }}">
+            <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/pastry-black.png') }}">
+            <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/pastry-white.png') }}">
             <button class="">Pastry</button>
         </div>
 
         <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
-            <img class="size-7 group-hover:hidden" src="{{ asset('storage/images/filter-category/Cookies-black.png') }}">
-            <img class="size-7 hidden group-hover:block" src="{{ asset('storage/images/filter-category/cookies-white.png') }}">
+            <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/Cookies-black.png') }}">
+            <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/cookies-white.png') }}">
             <button class="">Cookies</button>
         </div>
 
         <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
-            <img class="size-7 group-hover:hidden" src="{{ asset('storage/images/filter-category/dessert-black.png') }}">
-            <img class="size-7 hidden group-hover:block" src="{{ asset('storage/images/filter-category/dessert-white.png') }}">
+            <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/dessert-black.png') }}">
+            <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/dessert-white.png') }}">
             <button class="">Dessert</button>
         </div>
 
         <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
-            <img class="size-7 group-hover:hidden" src="{{ asset('storage/images/filter-category/savory-black.png') }}">
-            <img class="size-7 hidden group-hover:block" src="{{ asset('storage/images/filter-category/savory-white.png') }}">
+            <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/savory-black.png') }}">
+            <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/savory-white.png') }}">
             <button class="">Savory</button>
         </div>
     </div>

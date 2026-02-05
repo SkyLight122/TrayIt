@@ -13,7 +13,7 @@
 
     
     <div class="bg-gray-100 rounded-full w-100 h-fit flex items-center pl-3">
-    <img class="absolute size-6  bg-[#1A76FF] p-1.5 rounded-full" src="{{ asset('storage/images/portal/Search.png') }}">
+    <img class="absolute size-6  bg-[#1A76FF] p-1.5 rounded-full" src="{{ asset('assets/images/portal/Search.png') }}">
         <input
         wire:model.live.300ms='{{ $name }}'
         id="search"
@@ -26,7 +26,7 @@
     <div class="gap-3 flex items-center">
         <p>James Doe</p>
         <div class="w-12 h-12 rounded-full overflow-hidden">
-            <img src="{{ asset('storage/images/portal/Profile.jpg') }}">
+            <img src="{{ asset('assets/images/portal/Profile.jpg') }}">
         </div>
     </div>
 </div>
