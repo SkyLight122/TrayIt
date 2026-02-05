@@ -111,7 +111,7 @@ new class extends Component
         //untuk ubah bentuk cursor jadi bentuk tangan yang genggam
         centeredSlides: true,
         //jadi slide yang aktif adalah slide yang ditengah
-        slidesPerView: "2",
+        slidesPerView: 1,
         //ini buat ngatur berapa tampilan yang muncul dihalaman
         slideToClickedSlide: true,
         //fungsinya untuk animasi tinggal klik aja 
@@ -131,8 +131,6 @@ new class extends Component
             //ini buat jadiin slide yang tidak aktif menjadi lebih kecil
         },
         loop: true,
-
-        slidesPerView: 1, // DEFAULT HP
 
     breakpoints: {
         768: {
