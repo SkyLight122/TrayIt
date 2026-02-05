@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('address');
             $table->foreignId('bakery_type_id')->constrained('bakery_types')->onDelete('restrict');
             $table->dateTime('pickup_date');
+            $table->string('bakery_thumbnail')->nullable();
             $table->string('logo_path')->nullable();
             $table->integer('order_per_day');
             $table->timestamps();
