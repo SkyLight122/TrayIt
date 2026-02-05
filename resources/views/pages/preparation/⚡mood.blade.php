@@ -13,10 +13,11 @@ new class extends Component
 };
 ?>
 
-<div class="bg-[#FFF8F0] min-h-screen py-8">
-    <div class="flex items-center justify-between px-20">
-        <h1 class="text-[#88481E] font-semibold text-5xl">What are you <br> craving right now?</h1>
-        <div class="flex gap-2">
+<div class="bg-[#FFF8F0] min-h-screen lg:py-8 py-20 flex flex-col">
+    
+    <div class="flex items-center lg:justify-between justify-center lg:px-20"">
+        <h1 class="text-[#88481E] font-semibold lg:text-5xl text-3xl text-center lg:text-left">What are you <br> craving right now?</h1>
+        <div class="hidden lg:flex gap-2">
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
                 <img src="{{ asset('images/moodquiz/Cake.png') }}" class="w-9 h-12"/>
             </div>
@@ -43,47 +44,43 @@ new class extends Component
         </div>
     </div>
 
-    
+    <div class="flex-1 flex items-center justify-center">
+        <div class="swiper w-full lg:max-w-full lg:max-w-none">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-name="Cake">
+                    <img src="{{ asset('images/moodquiz/Cake.png') }}" class="lg:w-70 w-50 mx-auto">
+                </div>
 
-    <div class="swiper w-full">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" data-name="Cake">
-                <img src="{{ asset('images/moodquiz/Cake.png') }}" class="w-70 mx-auto">
-            </div>
+                <div class="swiper-slide" data-name="Bread">
+                    <img src="{{ asset('images/moodquiz/Bread.png') }}" class="lg:w-90 w-70 mx-auto">
+                </div>
 
-            <div class="swiper-slide" data-name="Bread">
-                <img src="{{ asset('images/moodquiz/Bread.png') }}" class="w-90 mx-auto">
-            </div>
+                <div class="swiper-slide" data-name="Pastry">
+                    <img src="{{ asset('images/moodquiz/Pastry.png') }}" class="lg:w-85 w-65 mx-auto">
+                </div>
 
-            <div class="swiper-slide" data-name="Pastry">
-                <img src="{{ asset('images/moodquiz/Pastry.png') }}" class="w-85 mx-auto">
-            </div>
+                <div class="swiper-slide" data-name="Cookie">
+                    <img src="{{ asset('images/moodquiz/Cookie.png') }}" class="lg:w-95 w-75 mx-auto">
+                </div>
 
-            <div class="swiper-slide" data-name="Cookie">
-                <img src="{{ asset('images/moodquiz/Cookie.png') }}" class="w-95 mx-auto">
-            </div>
+                <div class="swiper-slide" data-name="Dessert">
+                    <img src="{{ asset('images/moodquiz/Dessert.png') }}" class="lg:w-90 w-70 mx-auto">
+                </div>
 
-            <div class="swiper-slide" data-name="Dessert">
-                <img src="{{ asset('images/moodquiz/Dessert.png') }}" class="w-90 mx-auto">
-            </div>
-
-            <div class="swiper-slide" data-name="Savory">
-                <img src="{{ asset('images/moodquiz/Savory.png') }}" class="w-100 mx-auto">
+                <div class="swiper-slide" data-name="Savory">
+                    <img src="{{ asset('images/moodquiz/Savory.png') }}" class="lg:w-100 w-80 mx-auto">
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="flex justify-center font-semibold z-20">
-        <button id="categoryButton" class="mt-6 w-40 px-6 py-2 border-2 rounded-lg text-center 
-        text-[#FFF8F0] border-[#FFF8F0] hover:bg-[#FFF8F0] hover:text-[#AE693B]
-        lg:text-[#AE693B] lg:border-[#AE693B] lg:hover:bg-[#AE693B] lg:hover:text-[#FFF8F0]">Cake</button>
+    <div class="pb-10 flex justify-center">
+        <button id="categoryButton" class="mt-6 w-40 px-6 py-2 border-2 rounded-lg text-center text-[#88481E] border-[#88481E] hover:bg-[#88481E] hover:text-[#FFF8F0]">Cake</button>
     </div>
 
 </div>
 
 <style>
-
-
     .swiper-slide-active {
   filter: blur(0x);
 }
@@ -114,18 +111,10 @@ new class extends Component
         //untuk ubah bentuk cursor jadi bentuk tangan yang genggam
         centeredSlides: true,
         //jadi slide yang aktif adalah slide yang ditengah
-        slidesPerView: "1",
+        slidesPerView: "2",
         //ini buat ngatur berapa tampilan yang muncul dihalaman
         slideToClickedSlide: true,
         //fungsinya untuk animasi tinggal klik aja 
-        slidesPerView: 1, // DEFAULT HP
-
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-            }
-        },
-        
         coverflowEffect: {
             rotate: 0,
             stretch: 80,
@@ -140,11 +129,16 @@ new class extends Component
             //buat blur pada slide yang tidak aktif
             scale: 0.85,
             //ini buat jadiin slide yang tidak aktif menjadi lebih kecil
-
         },
         loop: true,
 
+        slidesPerView: 1, // DEFAULT HP
 
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        }
+    },
 
     on: {
         slideChange: function () {
