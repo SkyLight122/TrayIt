@@ -4,7 +4,7 @@ namespace App\Models;
 
 use App\Models\Product;
 use App\Models\BakeryType;
-use App\Models\BakeryUser;
+use App\Models\User;
 use App\Models\BakeryImage;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -32,8 +32,12 @@ class Bakery extends Model
         return $this->hasMany(BakeryImage::class);
     }
 
-    public function bakeries_users(){
-        return $this->hasMany(BakeryUser::class);
+    // public function bakeries_users(){
+    //     return $this->hasMany(BakeryUser::class);
+    // }
+
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 
     public function products(){

@@ -5,7 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Order;
 use App\Models\CakeType;
-use App\Models\BakeryUser;
+use App\Models\Bakery;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -32,9 +32,13 @@ class User extends Authenticatable
         'password',
     ];
 
-    public function bakeries_users()
-    {
-        return $this->hasMany(BakeryUser::class);
+    // public function bakeries_users()
+    // {
+    //     return $this->hasMany(BakeryUser::class);
+    // }
+
+    public function bakery(){
+        return $this->hasOne(Bakery::class);
     }
 
     public function orders()

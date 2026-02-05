@@ -8,10 +8,13 @@ new class extends Component {
     public $search = '';
 
     #[Computed]
-    public function users()
+    public function bakeries()
     {
-        return Bakery::search($this->search)->get();
+        return Bakery::where('name', 'like', "%{$this->search}%")
+                    ->orWhere('email', 'like', "%{$this->search}%")
+                    ->orWhere('phone_number', 'like', "%{$this->search}%")->get();
     }
+
 };
 ?>
 
