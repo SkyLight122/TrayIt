@@ -22,7 +22,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Melati No. 1',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-01',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery1.png',
+        'bakery_thumbnail' => 'portal/bakery/Bakery1.png',
         'order_per_day' => 12,
     ]);
 
@@ -35,7 +35,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Kenanga No. 2',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-02',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery2.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery2.jpg',
         'order_per_day' => 15,
     ]);
 
@@ -48,7 +48,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Mawar No. 3',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-03',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery3.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery3.jpg',
         'order_per_day' => 10,
     ]);
 
@@ -61,7 +61,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Anggrek No. 4',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-04',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery4.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery4.jpg',
         'order_per_day' => 18,
     ]);
 
@@ -74,7 +74,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Dahlia No. 5',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-05',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery5.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery5.jpg',
         'order_per_day' => 20,
     ]);
 
@@ -87,7 +87,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Teratai No. 6',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-06',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery6.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery6.jpg',
         'order_per_day' => 8,
     ]);
 
@@ -100,7 +100,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Flamboyan No. 7',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-07',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery7.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery7.jpg',
         'order_per_day' => 14,
     ]);
 
@@ -113,7 +113,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Kamboja No. 8',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-08',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery8.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery8.jpg',
         'order_per_day' => 9,
     ]);
 
@@ -126,7 +126,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Anyelir No. 9',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-09',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery9.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery9.jpg',
         'order_per_day' => 16,
     ]);
 
@@ -139,7 +139,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Sakura No. 10',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-10',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery10.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery10.jpg',
         'order_per_day' => 22,
     ]);
 
@@ -152,7 +152,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Cemara No. 11',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-11',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery11.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery11.jpg',
         'order_per_day' => 11,
     ]);
 
@@ -165,7 +165,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Pinus No. 12',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-12',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery12.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery12.jpg',
         'order_per_day' => 13,
     ]);
 
@@ -178,7 +178,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Akasia No. 13',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-13',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery13.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery13.jpg',
         'order_per_day' => 17,
     ]);
 
@@ -191,7 +191,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Lavender No. 14',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-14',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery14.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery14.jpg',
         'order_per_day' => 7,
     ]);
 
@@ -204,7 +204,7 @@ class BakerySeeder extends Seeder
         'address' => 'Jl. Tulip No. 15',
         'bakery_type_id' => 2,
         'pickup_date' => '2026-05-15',
-        'bakery_thumbnail' => 'images/portal/bakery/Bakery15.jpg',
+        'bakery_thumbnail' => 'portal/bakery/Bakery15.jpg',
         'order_per_day' => 19,
     ]);
 
