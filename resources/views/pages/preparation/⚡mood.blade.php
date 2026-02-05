@@ -13,38 +13,32 @@ new class extends Component
 };
 ?>
 
-<div class="min-h-screen bg-[#FFF8F0] py-10 flex flex-col justify-around relative overflow-hidden">
-
-    <div class="lg:hidden absolute bottom-[-50%] left-1/2 -translate-x-1/2
-               w-[280%] h-[130%] rounded-full"
-        style="background: radial-gradient(circle, #AE693B 35%, #FFF8F0 60%);">
-    </div>
-    
-    <div class="lg:flex items-center justify-between px-15">
-        <h1 class="text-[#AE693B] font-semibold lg:text-5xl text-3xl lg:text-left text-center z-20">What are you <br> craving right now?</h1>
-        <div class="hidden sm:flex flex gap-2">
-            <div class="w-17 h-17 rounded-full border-3 border-[#AE693B] flex items-center justify-center">
-                <img src="{{ asset('images/Cake.png') }}" class="w-9 h-12"/>
+<div class="bg-[#FFF8F0] min-h-screen py-8">
+    <div class="flex items-center justify-between px-20">
+        <h1 class="text-[#88481E] font-semibold text-5xl">What are you <br> craving right now?</h1>
+        <div class="flex gap-2">
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/moodquiz/Cake.png') }}" class="w-9 h-12"/>
             </div>
             
-            <div class="w-17 h-17 rounded-full border-3 border-[#AE693B] flex items-center justify-center">
-                <img src="{{ asset('images/Bread.png') }}" class="w-12 h-12"/>
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/moodquiz/Bread.png') }}" class="w-12 h-12"/>
             </div>
 
-            <div class="w-17 h-17 rounded-full border-3 border-[#AE693B] flex items-center justify-center">
-                <img src="{{ asset('images/Pastry.png') }}" class="w-12 h-12"/>
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/moodquiz/Pastry.png') }}" class="w-12 h-12"/>
             </div>
 
-            <div class="w-17 h-17 rounded-full border-3 border-[#AE693B] flex items-center justify-center">
-                <img src="{{ asset('images/Cookie.png') }}" class="w-12 h-13"/>
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/moodquiz/Cookie.png') }}" class="w-12 h-13"/>
             </div>
 
-            <div class="w-17 h-17 rounded-full border-3 border-[#AE693B] flex items-center justify-center">
-                <img src="{{ asset('images/Dessert.png') }}" class="w-12 h-12"/>
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/moodquiz/Dessert.png') }}" class="w-12 h-12"/>
             </div>
             
-            <div class="w-17 h-17 rounded-full border-3 border-[#AE693B] flex items-center justify-center">
-                <img src="{{ asset('images/Savory.png') }}" class="w-12 h-12"/>
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('images/moodquiz/Savory.png') }}" class="w-12 h-12"/>
             </div>
         </div>
     </div>
@@ -54,27 +48,27 @@ new class extends Component
     <div class="swiper w-full">
         <div class="swiper-wrapper">
             <div class="swiper-slide" data-name="Cake">
-                <img src="{{ asset('images/Cake.png') }}" class="lg:w-70 w-50 mx-auto">
+                <img src="{{ asset('images/moodquiz/Cake.png') }}" class="w-70 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Bread">
-                <img src="{{ asset('images/Bread.png') }}" class="lg:w-90 w-70 mx-auto">
+                <img src="{{ asset('images/moodquiz/Bread.png') }}" class="w-90 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Pastry">
-                <img src="{{ asset('images/Pastry.png') }}" class="lg:w-85 w-65 mx-auto">
+                <img src="{{ asset('images/moodquiz/Pastry.png') }}" class="w-85 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Cookie">
-                <img src="{{ asset('images/Cookie.png') }}" class="lg:w-95 w-75 mx-auto">
+                <img src="{{ asset('images/moodquiz/Cookie.png') }}" class="w-95 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Dessert">
-                <img src="{{ asset('images/Dessert.png') }}" class="lg:w-90 w-70 mx-auto">
+                <img src="{{ asset('images/moodquiz/Dessert.png') }}" class="w-90 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Savory">
-                <img src="{{ asset('images/Savory.png') }}" class="lg:w-100 w-80 mx-auto">
+                <img src="{{ asset('images/moodquiz/Savory.png') }}" class="w-100 mx-auto">
             </div>
         </div>
     </div>

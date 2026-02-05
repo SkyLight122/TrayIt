@@ -77,15 +77,15 @@ new class extends Component {
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
-                    <img src="{{ asset('images/Login1.jpg') }}" class="w-full h-194 object-cover">
+                    <img src="{{ asset('images/loginregis/Login1.jpg') }}" class="w-full h-194 object-cover">
                 </div>
 
                 <div class="swiper-slide">
-                    <img src="{{ asset('images/Login2.jpg') }}" class="w-full h-194 object-cover">
+                    <img src="{{ asset('images/loginregis/Login2.jpg') }}" class="w-full h-194 object-cover">
                 </div>
 
                 <div class="swiper-slide">
-                    <img src="{{ asset('images/Login3.jpg') }}" class="w-full h-194 object-cover">
+                    <img src="{{ asset('images/loginregis/Login3.jpg') }}" class="w-full h-194 object-cover">
                 </div>
 
             </div>
