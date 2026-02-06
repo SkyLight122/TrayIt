@@ -40,7 +40,7 @@
                 </button>
             @endif
         @endfor
-        
+
         @if ($paginator->hasMorePages())
             <button wire:click="nextPage" class="text-gray-600 hover:text-black">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -53,6 +53,7 @@
                     <path d="M9 6l6 6-6 6" />
                 </svg>
             </span>
+            asd
         @endif
 
     </nav>
