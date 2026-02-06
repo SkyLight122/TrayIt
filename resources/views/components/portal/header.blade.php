@@ -6,9 +6,9 @@
     <p class="text-2xl font-bold text-[#1A76FF]">TrayIt</p>
 
     <div class="w-fit flex gap-20">
-        <a href="/portal" class="font-light">Home</a>
-        <a href="/features" class="font-light">Features</a>
-        <a href="/service" class="font-light">Service</a>
+        <a href="/portal" class="font-light hover:text-[#1A76FF] transition duration-200">Home</a>
+        <a href="/features" class="font-light hover:text-[#1A76FF] transition duration-200">Features</a>
+        <a href="/service" class="font-light hover:text-[#1A76FF] transition duration-200">Service</a>
     </div>
 
     
