@@ -13,73 +13,66 @@ new class extends Component
 };
 ?>
 
-<div class="bg-[#FFF8F0] min-h-screen lg:py-8 py-20 flex flex-col">
+<div class="bg-[#FFF8F0] min-h-screen lg:py-8 py-20 flex flex-col justify-around">
     
     <div class="flex items-center lg:justify-between justify-center lg:px-20"">
         <h1 class="text-[#88481E] font-semibold lg:text-5xl text-3xl text-center lg:text-left">What are you <br> craving right now?</h1>
         <div class="hidden lg:flex gap-2">
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('storage/images/moodquiz/Cake.png') }}" class="w-9 h-12"/>
+                <img src="{{ asset('assets/images/moodquiz/Cake.png') }}" class="w-9 h-12"/>
             </div>
             
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('storage/images/moodquiz/Bread.png') }}" class="w-12 h-12"/>
+                <img src="{{ asset('assets/images/moodquiz/Bread.png') }}" class="w-12 h-12"/>
             </div>
 
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('storage/images/moodquiz/Pastry.png') }}" class="w-12 h-12"/>
+                <img src="{{ asset('assets/images/moodquiz/Pastry.png') }}" class="w-12 h-12"/>
             </div>
 
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('storage/images/moodquiz/Cookie.png') }}" class="w-12 h-13"/>
+                <img src="{{ asset('assets/images/moodquiz/Cookie.png') }}" class="w-12 h-13"/>
             </div>
 
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('storage/images/moodquiz/Dessert.png') }}" class="w-12 h-12"/>
+                <img src="{{ asset('assets/images/moodquiz/Dessert.png') }}" class="w-12 h-12"/>
             </div>
             
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('storage/images/moodquiz/Savory.png') }}" class="w-12 h-12"/>
+                <img src="{{ asset('assets/images/moodquiz/Savory.png') }}" class="w-12 h-12"/>
             </div>
         </div>
     </div>
-
-    <div class="flex-1 flex items-center justify-center">
-        <div class="swiper w-full lg:max-w-full lg:max-w-none">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" data-name="Cake">
-                    <img src="{{ asset('images/moodquiz/Cake.png') }}" class="lg:w-70 w-50 mx-auto">
-                </div>
 
     <div class="swiper w-full">
         <div class="swiper-wrapper">
             <div class="swiper-slide" data-name="Cake">
-                <img src="{{ asset('storage/images/moodquiz/Cake.png') }}" class="w-70 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Cake.png') }}" class="w-70 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Bread">
-                <img src="{{ asset('storage/images/moodquiz/Bread.png') }}" class="w-90 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Bread.png') }}" class="w-90 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Pastry">
-                <img src="{{ asset('storage/images/moodquiz/Pastry.png') }}" class="w-85 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Pastry.png') }}" class="w-85 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Cookie">
-                <img src="{{ asset('storage/images/moodquiz/Cookie.png') }}" class="w-95 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Cookie.png') }}" class="w-95 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Dessert">
-                <img src="{{ asset('storage/images/moodquiz/Dessert.png') }}" class="w-90 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Dessert.png') }}" class="w-90 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Savory">
-                <img src="{{ asset('storage/images/moodquiz/Savory.png') }}" class="w-100 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Savory.png') }}" class="w-100 mx-auto">
             </div>
         </div>
     </div>
 
-    <div class="pb-10 flex justify-center">
+    <div class="flex justify-center">
         <button id="categoryButton" class="mt-6 w-40 px-6 py-2 border-2 rounded-lg text-center text-[#88481E] border-[#88481E] hover:bg-[#88481E] hover:text-[#FFF8F0]">Cake</button>
     </div>
 
