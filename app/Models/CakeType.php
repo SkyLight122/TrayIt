@@ -21,4 +21,8 @@ class CakeType extends Model
     public function users(){
         return $this->hasMany(User::class);
     }
+
+    public function bakeries(){
+        return $this->belongsToMany(CakeType::class, 'bakery_cake_types');
+    }
 }

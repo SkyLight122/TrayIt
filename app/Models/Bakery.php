@@ -43,4 +43,8 @@ class Bakery extends Model
     public function products(){
         return $this->hasMany(Product::class);
     }
+
+    public function cake_types(){
+        return $this->belongsToMany(CakeType::class, 'bakery_cake_types');
+    }
 }
