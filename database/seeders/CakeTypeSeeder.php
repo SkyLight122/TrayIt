@@ -13,7 +13,7 @@ class CakeTypeSeeder extends Seeder
      */
     public function run(): void
     {
-        $cakeTypes = ['Cake', 'Pastry', 'Bread', 'Cookies & Biscuit', 'Dessert', 'Savory'];
+        $cakeTypes = ['Cake', 'Bread', 'Pastry', 'Cookies', 'Dessert', 'Savory'];
 
         foreach ($cakeTypes as $cakeType) {
 
