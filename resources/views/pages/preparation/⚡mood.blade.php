@@ -47,27 +47,27 @@ new class extends Component
     <div class="swiper w-full">
         <div class="swiper-wrapper">
             <div class="swiper-slide" data-name="Cake">
-                <img src="{{ asset('assets/images/moodquiz/Cake.png') }}" class="w-70 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Cake.png') }}" class="lg:w-70 w-50 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Bread">
-                <img src="{{ asset('assets/images/moodquiz/Bread.png') }}" class="w-90 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Bread.png') }}" class="lg:w-90 w-70 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Pastry">
-                <img src="{{ asset('assets/images/moodquiz/Pastry.png') }}" class="w-85 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Pastry.png') }}" class="lg:w-85 w-65 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Cookie">
-                <img src="{{ asset('assets/images/moodquiz/Cookie.png') }}" class="w-95 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Cookie.png') }}" class="lg:w-95 w-75 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Dessert">
-                <img src="{{ asset('assets/images/moodquiz/Dessert.png') }}" class="w-90 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Dessert.png') }}" class="lg:w-90 w-70 mx-auto">
             </div>
 
             <div class="swiper-slide" data-name="Savory">
-                <img src="{{ asset('assets/images/moodquiz/Savory.png') }}" class="w-100 mx-auto">
+                <img src="{{ asset('assets/images/moodquiz/Savory.png') }}" class="lg:w-100 w-80 mx-auto">
             </div>
         </div>
     </div>
