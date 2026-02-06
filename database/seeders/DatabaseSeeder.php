@@ -29,7 +29,8 @@ class DatabaseSeeder extends Seeder
             CakeTypeSeeder::class,
             BakeryTypeSeeder::class,
             UserSeeder::class,
-            BakerySeeder::class
+            BakerySeeder::class,
+            BakeryCakeTypeSeeder::class
         ]);
     }
 }

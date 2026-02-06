@@ -106,8 +106,8 @@ new class extends Component {
         @foreach ($this->bakeries as $bakery)
             <x-portal.card 
                 image="{{ $bakery->bakery_thumbnail }}" 
-                title="{{ $bakery->name }}" 
-                description="{{ $bakery->description }}">
+                :title="$bakery->name" 
+                :description="$bakery->description">
             </x-portal.card>
         @endforeach
     </div>
