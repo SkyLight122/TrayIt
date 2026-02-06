@@ -20,7 +20,7 @@ new class extends Component {
     {
         return Bakery::where('name', 'like', "%{$this->search}%")
                     ->orWhere('email', 'like', "%{$this->search}%")
-                    ->orWhere('phone_number', 'like', "%{$this->search}%")->paginate(10);
+                    ->orWhere('phone_number', 'like', "%{$this->search}%")->paginate(3);
     }
 
 };
@@ -58,44 +58,44 @@ new class extends Component {
         </div>
     </div>
 
-    <div class="flex justify-center gap-10 my-15">
-        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
+      <div class="flex justify-center gap-10 my-15">
+        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white transition duration-200">
             <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/all-black.png') }}">
             <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/All-white.png') }}">
             <button class="">All</button>
         </div>
 
-        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
+        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white transition duration-200">
             <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/Cake-black.png') }}">
             <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/cake-white.png') }}">
             <button class="">Cake</button>
         </div>
 
-        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
+        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white transition duration-200">
             <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/bread-black.png') }}">
             <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/bread-white.png') }}">
             <button class="">Bread</button>
         </div>
 
-        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
+        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white transition duration-200">
             <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/pastry-black.png') }}">
             <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/pastry-white.png') }}">
             <button class="">Pastry</button>
         </div>
 
-        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
+        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white transition duration-200">
             <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/Cookies-black.png') }}">
             <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/cookies-white.png') }}">
             <button class="">Cookies</button>
         </div>
 
-        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
+        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white transition duration-200">
             <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/dessert-black.png') }}">
             <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/dessert-white.png') }}">
             <button class="">Dessert</button>
         </div>
 
-        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
+        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white transition duration-200">
             <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/savory-black.png') }}">
             <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/savory-white.png') }}">
             <button class="">Savory</button>
@@ -111,7 +111,7 @@ new class extends Component {
             </x-portal.card>
         @endforeach
     </div>
-    {{ $this->bakeries->links() }}
+    {{ $this->bakeries->links('components.portal.pagination') }}
 </div>
 
 <script>
