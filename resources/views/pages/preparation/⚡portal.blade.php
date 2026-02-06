@@ -19,8 +19,14 @@ new class extends Component {
     {
         return Bakery::where('name', 'like', "%{$this->search}%")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     ->orWhere('email', 'like', "%{$this->search}%")
                     ->orWhere('phone_number', 'like', "%{$this->search}%")->paginate(3);
+=======
+            ->orWhere('email', 'like', "%{$this->search}%")
+            ->orWhere('phone_number', 'like', "%{$this->search}%")
+            ->paginate(3);
+>>>>>>> Stashed changes
 =======
             ->orWhere('email', 'like', "%{$this->search}%")
             ->orWhere('phone_number', 'like', "%{$this->search}%")
@@ -29,7 +35,7 @@ new class extends Component {
     }
 };
 ?>
-
+    
 <div class="font-[montserrat]">
     <x-portal.header name="search"></x-portal.header>
 
@@ -93,6 +99,7 @@ new class extends Component {
         </div>
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white transition duration-200">
             <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/Cookies-black.png') }}">
             <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/cookies-white.png') }}">
@@ -109,6 +116,22 @@ new class extends Component {
             <img class="size-7 hidden group-hover:block"
                 src="{{ asset('assets/images/filter-category/cookies-white.png') }}">
             <button class="">Cookies</button>
+=======
+        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
+            <img class="size-7 group-hover:hidden"
+                src="{{ asset('assets/images/filter-category/Cookies-black.png') }}">
+            <img class="size-7 hidden group-hover:block"
+                src="{{ asset('assets/images/filter-category/cookies-white.png') }}">
+            <button class="">Cookies</button>
+        </div>
+
+        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
+            <img class="size-7 group-hover:hidden"
+                src="{{ asset('assets/images/filter-category/dessert-black.png') }}">
+            <img class="size-7 hidden group-hover:block"
+                src="{{ asset('assets/images/filter-category/dessert-white.png') }}">
+            <button class="">Dessert</button>
+>>>>>>> Stashed changes
         </div>
 
         <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
@@ -130,8 +153,12 @@ new class extends Component {
 
     <div class="flex justify-center gap-6 flex-wrap">
         @foreach ($this->bakeries as $bakery)
+<<<<<<< Updated upstream
             <x-portal.card image="{{ $bakery->bakery_thumbnail }}" title="{{ $bakery->name }}"
                 description="{{ $bakery->description }}">
+=======
+            <x-portal.card image="{{ $bakery->bakery_thumbnail }}" :title="$bakery->name" :description="$bakery->description">
+>>>>>>> Stashed changes
             </x-portal.card>
         @endforeach
     </div>

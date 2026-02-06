@@ -41,7 +41,10 @@
             @endif
         @endfor
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         @if ($paginator->hasMorePages())
             <button wire:click="nextPage" class="text-gray-600 hover:text-black">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
