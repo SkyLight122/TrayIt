@@ -59,9 +59,9 @@
         <div class="h-px bg-black/20 my-2"></div>
 
         <nav class="flex flex-col gap-4 text-lg">
-            <a href="#" class="text-black hover:text-red-500">Home</a>
-            <a href="#" class="text-black hover:text-red-500">Features</a>
-            <a href="#" class="text-black hover:text-red-500">Service</a>
+            <a href="#" class="text-black hover:text-red-500 focus:text-[#1A76FF]">Home</a>
+            <a href="#" class="text-black hover:text-red-500 focus:text-[#1A76FF]">Features</a>
+            <a href="#" class="text-black hover:text-red-500 focus:text-[#1A76FF]">Service</a>
         </nav>
 
     </div>

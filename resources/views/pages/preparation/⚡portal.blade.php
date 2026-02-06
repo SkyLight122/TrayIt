@@ -86,14 +86,12 @@ new class extends Component {
             <button class="">Pastry</button>
         </div>
 
-        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
-            <img class="size-7 group-hover:hidden"
-                src="{{ asset('assets/images/filter-category/Cookies-black.png') }}">
-            <img class="size-7 hidden group-hover:block"
-                src="{{ asset('assets/images/filter-category/cookies-white.png') }}">
+
+        <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white transition duration-200">
+            <img class="size-7 group-hover:hidden" src="{{ asset('assets/images/filter-category/Cookies-black.png') }}">
+            <img class="size-7 hidden group-hover:block" src="{{ asset('assets/images/filter-category/cookies-white.png') }}">
             <button class="">Cookies</button>
         </div>
-
 
         <div class="group flex gap-3 px-4 py-2 rounded-xl hover:bg-[#1A76FF] hover:text-white">
             <img class="size-7 group-hover:hidden"
