@@ -6,11 +6,10 @@ new class extends Component {
     //
 };
 ?>
-
 <div>
     <x-header></x-header>
+    <section id="home" class="scroll-mt-24">
 
-    <section id="home" class="scroll-mt-20">
         <div class="pt-6 px-4 sm:px-8 lg:px-12">
             <div class="relative w-full h-[420px] sm:h-[520px] md:h-[580px] rounded-2xl overflow-hidden bg-cover bg-center"
                 style="background-image: url('{{ asset('images/landing_hero.png') }}')">
@@ -53,38 +52,8 @@ new class extends Component {
         </div>
     </div>
 
-    <div class="w-full max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row items-start gap-8 md:gap-16 lg:gap-24">
-            <img src="images/baker.png" alt=""
-                class="hidden md:block h-40 md:h-48 lg:h-130 w-auto md:mb-20">
 
-            <div class="flex flex-col w-full max-w-2xl">
-                <x-infocard title="Professional Setup" subtitle="Choose a setup that's ready from day one"
-                    desc="Domain, server, and complete website structure built to support your"
-                    sub_desc="bakery online."></x-infocard>
-
-                <hr class="w-full h-[1px] bg-gray-300 my-6">
-
-                <x-infocard title="Efficiency" subtitle="asdasdsadasdasdsadasdasdasdas"
-                    desc="Manage products, pre-orders, notifications, and admin tasks in one streamlined"
-                    sub_desc="workflow saving time every day."></x-infocard>
-
-                <hr class="w-full h-[1px] bg-gray-300 my-6">
-
-                <x-infocard title="Reliability" subtitle="ads"
-                    desc="Optimized performance, strong security, and ongoing maintenance to keep"
-                    sub_desc="your website running smoothly."></x-infocard>
-            </div>
-        </div>
-    </div>
-
-    <div class="flex justify-center flex-col w-full text-center">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black">Our Bakery Partners</h1>
-        <p class="sm:mt-4 text-sm sm:text-base md:text-lg text-gray-400 mt-3">Start your bakery journey with Tray It
-        </p>
-    </div>
-
-    <div class="overflow-x-hidden relative isolate">
+    <div class="overflow-x-hidden relative">
         <div class="w-full">
             <div class="flex pt-10 sm:pt-16 gap-4 sm:gap-6 [animation:var(--animate-scroll-left)]">
                 <x-bakerycard image="images/bakery1.png" logo="images/logo1.png"></x-bakerycard>
@@ -127,15 +96,18 @@ new class extends Component {
             </div>
         </div>
         <div
-            class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 lg:w-30
-        bg-gradient-to-r from-white to-transparent z-20">
+            class="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-32 lg:w-40
+            bg-gradient-to-r from-white to-transparent z-20">
         </div>
 
         <div
-            class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 lg:w-30
-        bg-gradient-to-l from-white to-transparent z-20">
+            class="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-32 lg:w-40
+            bg-gradient-to-l from-white to-transparent z-20">
         </div>
     </div>
+
+
+
 
     <div class="flex justify-center flex-col w-full text-center pt-16">
         <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black">Why Tray It?</h1>
@@ -241,5 +213,4 @@ new class extends Component {
     <div class="">
         <x-footer></x-footer>
     </div>
-
 </div>

@@ -1,4 +1,4 @@
-<header class="sticky top-0 z-50 bg-white px-6 sm:px-8 lg:px-12 py-4 relative z-50">
+<header class="sticky top-0 bg-white px-6 sm:px-8 lg:px-12 py-4 relative z-50">
     <div class="flex items-center justify-between md:grid md:grid-cols-3">
         <h1 class="text-[#1A76FF] text-2xl sm:text-3xl font-bold">
             TrayIt
