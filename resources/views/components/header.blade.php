@@ -1,18 +1,18 @@
-<header class="px-6 sm:px-8 lg:px-12 py-4 relative z-50">
+<header class="sticky top-0 bg-white px-6 sm:px-8 lg:px-12 py-4 relative z-50">
     <div class="flex items-center justify-between md:grid md:grid-cols-3">
         <h1 class="text-[#1A76FF] text-2xl sm:text-3xl font-bold">
             TrayIt
         </h1>
 
         <nav class="hidden md:flex justify-center gap-[6vw] text-xl">
-            <a href="#" class="text-[#6B6B6B] hover:text-gray-600">Home</a>
-            <a href="#" class="text-[#6B6B6B] hover:text-gray-600">Features</a>
-            <a href="#" class="text-[#6B6B6B] hover:text-gray-600">Service</a>
+            <a href="#home" class="text-[#6B6B6B] hover:text-gray-600">Home</a>
+            <a href="#features" class="text-[#6B6B6B] hover:text-gray-600">Features</a>
+            <a href="#service" class="text-[#6B6B6B] hover:text-gray-600">Service</a>
         </nav>
 
         <div class="flex items-center justify-end gap-3">
             <button
-                class="hidden md:block border-2 border-blue-400 bg-[#1A76FF] text-white rounded-xl px-5 h-11 text-sm sm:text-base cursor-pointer hover:bg-blue-600">
+                class="hidden md:block border-2 bg-[#1A76FF] text-white rounded-xl px-5 h-11 text-sm sm:text-base cursor-pointer hover:bg-blue-600">
                 My Account
             </button>
 

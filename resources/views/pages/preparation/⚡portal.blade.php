@@ -119,7 +119,11 @@ new class extends Component {
         @endforeach
     </div>
     <div class="pt-6">
-        {{ $this->bakeries->links('components.portal.pagination') }}
+        {{ $this->bakeries->links('vendor.livewire.tailwind') }}
+    </div>
+    
+    <div class="">
+        <x-footer></x-footer>
     </div>
 </div>
 

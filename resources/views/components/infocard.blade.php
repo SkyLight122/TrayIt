@@ -4,8 +4,9 @@
     'desc' => 'No Desc',
     'sub_desc' => 'No Sub Desc',
 ])
-<div class="group w-full">
-    <div class=" w-full md:max-w-2xl px-4 sm:px-6 md:px-10 py-6 sm:py-8 rounded-3xl transition-all duration-300 ease-out hover:bg-gray-200">
+<div class="group w-full flex justify-center lg:mb-0 mb-5">
+    <div class=" lg:w-full md:max-w-2xl px-4 sm:px-6 md:px-10 py-6 sm:py-8 rounded-3xl transition-all duration-300 ease-out lg:hover:bg-gray-200 
+    lg:bg-white bg-gray-200 w-95">
 
         <h1 class="text-[#1A76FF] font-bold text-lg">{{ $title }}</h1>
 
