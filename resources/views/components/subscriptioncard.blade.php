@@ -21,12 +21,16 @@
                 <p class="text-gray-400 mt-5 max-w-[520px]">Drag the slider to update how long do you want to use Tray It</p>
             </div>
 
-            <div class="flex w-full lg:w-2/5 justify-center lg:justify-end mt-4 lg:mt-0 px-6 lg:px-0 lg:pr-16  order-1 lg:order-2">
-                <div class="w-full max-w-none lg:max-w-[380px] border-2 border-gray-400 rounded-2xl py-5 px-6">
+            <div
+                class="flex w-full lg:w-2/5 justify-center lg:justify-end lg:mt-0 px-6 lg:px-0 lg:pr-16  order-1 lg:order-2">
+                <div
+                    class="w-full max-w-none lg:max-w-[380px] mb-8 border-2 border-gray-400 rounded-2xl py-5 px-6 flex flex-col gap-4">
                     <p class="text-gray-400">Information</p>
-                    <p class="text-3xl font-bold mt-2"><span id="pricePerMonth" data-price="150000">Rp150.000</span>
-                    </p>
-                    <p class="text-gray-400">/ Month</p>
+                    <div class="flex flex-col lg:mt-17">
+                        <p class="lg:text-3xl text-2xl font-bold"><span id="pricePerMonth"
+                                data-price="150000">Rp150.000</span></p>
+                        <p class="text-gray-400">/ Month</p>
+                    </div>
                 </div>
             </div>
         </div>

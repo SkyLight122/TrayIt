@@ -4,15 +4,15 @@
             TrayIt
         </h1>
 
-        <nav class="hidden md:flex justify-center gap-[6vw] text-xl">
-            <a href="#" class="text-[#6B6B6B] hover:text-gray-600">Home</a>
-            <a href="#" class="text-[#6B6B6B] hover:text-gray-600">Features</a>
-            <a href="#" class="text-[#6B6B6B] hover:text-gray-600">Service</a>
+        <nav class="hidden md:flex justify-center gap-[6vw] text-[18px]">
+            <a href="/portal" class="text-[#000000] hover:text-[#1A76FF]">Home</a>
+            <a href="#" class="text-[#000000] hover:text-[#1A76FF]">Features</a>
+            <a href="#" class="text-[#000000] hover:text-[#1A76FF]">Service</a>
         </nav>
 
         <div class="flex items-center justify-end gap-3">
             <button
-                class="hidden md:block border-2 border-blue-400 bg-[#1A76FF] text-white rounded-xl px-5 h-11 text-sm sm:text-base cursor-pointer hover:bg-blue-600">
+                class="hidden md:block border-2 bg-[#1A76FF] text-white rounded-xl px-5 h-11 text-sm sm:text-base cursor-pointer hover:bg-blue-600">
                 My Account
             </button>
 
