@@ -169,6 +169,8 @@ new class extends Component {
     </div>
 </div>
 
+<div>Vinsen disini</div>
+
 <script>
     new Swiper('.iklan-swiper', {
         loop: true,
