@@ -11,6 +11,12 @@ new class extends Component {
     public $search = '';
     public $cake_type = null;
 
+    public function mount(){
+        if(auth()->user()?->cake_type_id){
+            $this->cake_type = CakeType::find(auth()->user()->cake_type_id)->name;
+        }
+    }
+
     public function search()
     {
         $this->resetPage();
