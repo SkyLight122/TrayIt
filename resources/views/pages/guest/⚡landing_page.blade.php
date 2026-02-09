@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 use Livewire\Component;
 
@@ -6,81 +6,54 @@ new class extends Component {
     //
 };
 ?>
-
 <div>
     <x-header></x-header>
+    <section id="home" class="scroll-mt-24">
 
-    <div class="pt-6 px-4 sm:px-8 lg:px-12">
-        <div class="relative w-full h-[420px] sm:h-[520px] md:h-[580px] rounded-2xl overflow-hidden bg-cover bg-center"
-            style="background-image: url('{{ asset('images/landing_hero.png') }}')">
+        <div class="pt-6 px-4 sm:px-8 lg:px-12">
+            <div class="relative w-full h-[420px] sm:h-[520px] md:h-[580px] rounded-2xl overflow-hidden bg-cover bg-center"
+                style="background-image: url('{{ asset('images/landing_hero.png') }}')">
 
-            <div
-                class="absolute bottom-20 sm:bottom-8 md:bottom-16 left-0 z-10 p-6 sm:p-10 md:p-14 text-white max-w-2xl">
+                <div
+                    class="absolute bottom-20 sm:bottom-8 md:bottom-16 left-0 z-10 p-6 sm:p-10 md:p-14 text-white max-w-2xl">
 
-                <h1 class="text-2xl sm:text-4xl md:text-5xl font-semibold leading-tight drop-shadow-lg">
-                    Launch your website in one minute
-                </h1>
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl font-semibold leading-tight drop-shadow-lg">
+                        Launch your website in one minute
+                    </h1>
 
-                <p class="mt-3 text-sm sm:text-base md:text-lg font-light drop-shadow-md">
-                    Efficiently manage your order and boost productivity.
-                </p>
+                    <p class="mt-3 text-sm sm:text-base md:text-lg font-light drop-shadow-md">
+                        Efficiently manage your order and boost productivity.
+                    </p>
 
-                <p class="mt-4 text-sm sm:text-base md:text-lg font-light drop-shadow-md">
-                    From <span class="font-semibold">Rp150.000</span>/mo
-                </p>
-                <p class="-mt-1 text-sm sm:text-base md:text-lg font-light drop-shadow-md">
-                    + 3 mo. free
-                </p>
+                    <p class="mt-4 text-sm sm:text-base md:text-lg font-light drop-shadow-md">
+                        From <span class="font-semibold">Rp150.000</span>/mo
+                    </p>
+                    <p class="-mt-1 text-sm sm:text-base md:text-lg font-light drop-shadow-md">
+                        + 3 mo. free
+                    </p>
 
-                <button
-                    class="mt-5 bg-[#1A76FF] hover:bg-blue-600 transition rounded-xl px-6 py-3 text-sm sm:text-base md:text-lg shadow-lg cursor-pointer">
-                    See Offer
-                </button>
+                    <button
+                        class="mt-5 bg-[#1A76FF] hover:bg-blue-600 transition rounded-xl px-6 py-3 text-sm sm:text-base md:text-lg shadow-lg cursor-pointer">
+                        See Offer
+                    </button>
 
+                </div>
             </div>
         </div>
-    </div>
-
+    </section>
 
     <div class="py-10 sm:py-14 lg:py-12 text-center px-4">
         <div class="max-w-3xl mx-auto">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black">Domains designed for <br> bakers who refuse to settle</h1>
-            <p class="sm:mt-4 text-sm sm:text-base md:text-lg text-gray-400 mt-3 ">Your dream. Your journey. Tray It is ready to become the part of your bakery's journey</p>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black">Domains designed for
+                <br> bakers who refuse to settle
+            </h1>
+            <p class="sm:mt-4 text-sm sm:text-base md:text-lg text-gray-400 mt-3 ">Your dream. Your journey. Tray It
+                is ready to become the part of your bakery's journey</p>
         </div>
     </div>
 
-    <div class="w-full max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row items-start gap-8 md:gap-16 lg:gap-24">
-            <img src="images/baker.png" alt=""
-                class="hidden md:block h-40 md:h-48 lg:h-140 w-auto md:mb-20 ">
 
-            <div class="flex flex-col w-full max-w-2xl">
-                <x-infocard title="Professional Setup" subtitle="Choose a setup that's ready from day one"
-                    desc="Domain, server, and complete website structure built to support your"
-                    sub_desc="bakery online."></x-infocard>
-
-                <hr class="w-full bg-gray-300 my-4 lg:flex hidden ">
-
-                <x-infocard title="Efficiency" subtitle="Everything you need to run your bakery in one place."
-                    desc="Manage products, pre-orders, notifications, and admin tasks in one streamlined"
-                    sub_desc="workflow saving time every day."></x-infocard>
-
-                <hr class="w-full bg-gray-300 my-4 lg:flex hidden">
-
-                <x-infocard title="Reliability" subtitle="Built to keep your business running without worries."
-                    desc="Optimized performance, strong security, and ongoing maintenance to keep"
-                    sub_desc="your website running smoothly."></x-infocard>
-            </div>
-        </div>
-    </div>
-
-    <div class="flex justify-center flex-col w-full text-center mt-8">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black">Our Bakery Partners</h1>
-        <p class="sm:mt-4 text-sm sm:text-base md:text-lg text-gray-400 mt-3">Start your bakery journey with Tray It
-        </p>
-    </div>
-
-    <div class="overflow-x-hidden relative isolate">
+    <div class="overflow-x-hidden relative">
         <div class="w-full">
             <div class="flex pt-10 sm:pt-16 gap-4 sm:gap-6 [animation:var(--animate-scroll-left)]">
                 <x-bakerycard image="images/bakery1.png" logo="images/logo1.png"></x-bakerycard>
@@ -123,19 +96,23 @@ new class extends Component {
             </div>
         </div>
         <div
-            class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 lg:w-30
-        bg-gradient-to-r from-white to-transparent z-20">
+            class="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-32 lg:w-40
+            bg-gradient-to-r from-white to-transparent z-20">
         </div>
 
         <div
-            class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 lg:w-30
-        bg-gradient-to-l from-white to-transparent z-20">
+            class="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-32 lg:w-40
+            bg-gradient-to-l from-white to-transparent z-20">
         </div>
     </div>
 
+
+
+
     <div class="flex justify-center flex-col w-full text-center pt-16">
         <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black">Why Tray It?</h1>
-        <p class="sm:mt-4 text-sm sm:text-base md:text-lg text-gray-400 mt-3 pb-10">Manage your bakery business through a platform built for
+        <p class="sm:mt-4 text-sm sm:text-base md:text-lg text-gray-400 mt-3 pb-10">Manage your bakery business
+            through a platform built for
             <br> simplicity, efficiency, security, and ongoing support all in one place
         </p>
     </div>
@@ -161,75 +138,79 @@ new class extends Component {
         </div>
     </div>
 
-    <div class="flex justify-center flex-col w-full text-center pt-16">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black">Our Features</h1>
-        <p class="sm:mt-4 text-sm sm:text-base md:text-lg text-gray-400 mt-3 pb-10 lg:px-0 px-1">Features designed to make your experience smooth, efficient, and
-            <br> dependable.
-        </p>
-    </div>
+    <section id="features" class="scroll-mt-4">
 
-    <div class="flex justify-center items-center pt-4 px-4">
-        <div class="grid grid-cols-2 lg:grid-cols-10 gap-y-14 gap-x-10 max-w-7xl w-full">
-
-            <div class="col-span-2 lg:col-span-2 flex justify-center">
-                <x-featurescard image="images/preorder.png" title="Sistem Pre-Order (Pickup)"
-                    subtitle="Fill short description with 1 short sentence" />
-            </div>
-
-            <div class="col-span-1 lg:col-span-2 flex justify-center">
-                <x-featurescard image="images/domain.png" title="Domain and Server"
-                    subtitle="Fill short description with 1 short sentence" />
-            </div>
-
-            <div class="col-span-1 lg:col-span-2 flex justify-center">
-                <x-featurescard image="images/ui.png" title="Desain Website & UI Profesional"
-                    subtitle="Fill short description with 1 short sentence" />
-            </div>
-
-            <div class="col-span-1 lg:col-span-2 flex justify-center">
-                <x-featurescard image="images/website.png" title="Halaman Website Lengkap"
-                    subtitle="Fill short description with 1 short sentence" />
-            </div>
-
-            <div class="col-span-1 lg:col-span-2 flex justify-center">
-                <x-featurescard image="images/data.png" title="Manajemen Produk & Kategori"
-                    subtitle="Fill short description with 1 short sentence" />
-            </div>
-
-
-            <div class="hidden lg:block lg:col-span-1"></div>
-
-            <div class="col-span-1 lg:col-span-2 flex justify-center">
-                <x-featurescard image="images/dashboard.png" title="Dashboard Admin"
-                    subtitle="Fill short description with 1 short sentence" />
-            </div>
-
-            <div class="col-span-1 lg:col-span-2 flex justify-center">
-                <x-featurescard image="images/notification.png" title="Notifikasi Pesanan"
-                    subtitle="Fill short description with 1 short sentence" />
-            </div>
-
-            <div class="col-span-1 lg:col-span-2 flex justify-center">
-                <x-featurescard image="images/security.png" title="Keamanan & Performa"
-                    subtitle="Fill short description with 1 short sentence" />
-            </div>
-
-            <div class="col-span-1 lg:col-span-2 flex justify-center">
-                <x-featurescard image="images/support.png" title="Maintenance & Support"
-                    subtitle="Fill short description with 1 short sentence" />
-            </div>
-
-            <div class="hidden lg:block lg:col-span-1"></div>
+        <div class="flex justify-center flex-col w-full text-center pt-16">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black">Our Features</h1>
+            <p class="sm:mt-4 text-sm sm:text-base md:text-lg text-gray-400 mt-3 pb-2">Features designed to make
+                your experience smooth, efficient, and
+                <br> dependable.
+            </p>
         </div>
-    </div>
 
-    <div class="pt-16">
-        <x-subscriptioncard></x-subscriptioncard>
-    </div>
+        <div class="flex justify-center items-center pt-2 px-4">
+            <div class="grid grid-cols-2 lg:grid-cols-10 gap-y-14 gap-x-10 max-w-7xl w-full">
 
+                <div class="col-span-2 lg:col-span-2 flex justify-center">
+                    <x-featurescard image="images/preorder.png" title="Sistem Pre-Order (Pickup)"
+                        subtitle="Fill short description with 1 short sentence" />
+                </div>
+
+                <div class="col-span-1 lg:col-span-2 flex justify-center">
+                    <x-featurescard image="images/domain.png" title="Domain and Server"
+                        subtitle="Fill short description with 1 short sentence" />
+                </div>
+
+                <div class="col-span-1 lg:col-span-2 flex justify-center">
+                    <x-featurescard image="images/ui.png" title="Desain Website & UI Profesional"
+                        subtitle="Fill short description with 1 short sentence" />
+                </div>
+
+                <div class="col-span-1 lg:col-span-2 flex justify-center">
+                    <x-featurescard image="images/website.png" title="Halaman Website Lengkap"
+                        subtitle="Fill short description with 1 short sentence" />
+                </div>
+
+                <div class="col-span-1 lg:col-span-2 flex justify-center">
+                    <x-featurescard image="images/data.png" title="Manajemen Produk & Kategori"
+                        subtitle="Fill short description with 1 short sentence" />
+                </div>
+
+
+                <div class="hidden lg:block lg:col-span-1"></div>
+
+                <div class="col-span-1 lg:col-span-2 flex justify-center">
+                    <x-featurescard image="images/dashboard.png" title="Dashboard Admin"
+                        subtitle="Fill short description with 1 short sentence" />
+                </div>
+
+                <div class="col-span-1 lg:col-span-2 flex justify-center">
+                    <x-featurescard image="images/notification.png" title="Notifikasi Pesanan"
+                        subtitle="Fill short description with 1 short sentence" />
+                </div>
+
+                <div class="col-span-1 lg:col-span-2 flex justify-center">
+                    <x-featurescard image="images/security.png" title="Keamanan & Performa"
+                        subtitle="Fill short description with 1 short sentence" />
+                </div>
+
+                <div class="col-span-1 lg:col-span-2 flex justify-center">
+                    <x-featurescard image="images/support.png" title="Maintenance & Support"
+                        subtitle="Fill short description with 1 short sentence" />
+                </div>
+
+                <div class="hidden lg:block lg:col-span-1"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service">
+        <div class="pt-16">
+            <x-subscriptioncard></x-subscriptioncard>
+        </div>
+    </section>
 
     <div class="">
         <x-footer></x-footer>
     </div>
-
 </div>
