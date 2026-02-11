@@ -7,7 +7,7 @@ new class extends Component {
 };
 ?>
 <div>
-    <x-header></x-header>
+    <x-landing.header></x-landing.header>
     <section id="home" class="scroll-mt-24">
 
         <div class="pt-6 px-4 sm:px-8 lg:px-12">
@@ -56,43 +56,43 @@ new class extends Component {
     <div class="overflow-x-hidden relative">
         <div class="w-full">
             <div class="flex pt-10 sm:pt-16 gap-4 sm:gap-6 [animation:var(--animate-scroll-left)]">
-                <x-bakerycard image="images/bakery1.png" logo="images/logo1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png" logo="images/logo1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
 
-                <x-bakerycard image="images/bakery1.png" logo="images/logo1.png" />
-                <x-bakerycard image="images/bakery1.png" />
-                <x-bakerycard image="images/bakery1.png" />
-                <x-bakerycard image="images/bakery1.png" />
-                <x-bakerycard image="images/bakery1.png" />
-                <x-bakerycard image="images/bakery1.png" />
+                <x-landing.bakerycard image="images/bakery1.png" logo="images/logo1.png" />
+                <x-landing.bakerycard image="images/bakery1.png" />
+                <x-landing.bakerycard image="images/bakery1.png" />
+                <x-landing.bakerycard image="images/bakery1.png" />
+                <x-landing.bakerycard image="images/bakery1.png" />
+                <x-landing.bakerycard image="images/bakery1.png" />
             </div>
         </div>
 
         <div class="w-full">
             <div class="flex pt-6 sm:pt-8 gap-4 sm:gap-6 [animation:var(--animate-scroll-right)]">
-                <x-bakerycard image="images/bakery1.png" logo="images/logo1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png" logo="images/logo1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
 
-                <x-bakerycard image="images/bakery1.png" logo="images/logo1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
-                <x-bakerycard image="images/bakery1.png"></x-bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png" logo="images/logo1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
+                <x-landing.bakerycard image="images/bakery1.png"></x-landing.bakerycard>
             </div>
         </div>
         <div
@@ -121,19 +121,19 @@ new class extends Component {
         <div class="flex flex-col lg:flex-row gap-6 max-w-[1400px] mx-auto items-stretch">
 
             <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:flex lg:flex-col lg:w-1/2 order-2 lg:order-1 h-full">
-                <x-largeinfocardx title="Easy Domain Management"
+                <x-landing.largeinfocardx title="Easy Domain Management"
                     desc="Manage, renew, and control your domain effortlessly from one simple dashboard."
-                    image="images/blueicon2.png"></x-largeinfocardx>
+                    image="images/blueicon2.png"></x-landing.largeinfocardx>
 
-                <x-largeinfocardx title="Budget Friendly Pricing"
+                <x-landing.largeinfocardx title="Budget Friendly Pricing"
                     desc="Get premium domain services at prices that fit your budget."
-                    image="images/blue2.png"></x-largeinfocardx>
+                    image="images/blue2.png"></x-landing.largeinfocardx>
             </div>
 
             <div class="lg:w-1/2 order-1 lg:order-2 flex">
-                <x-largeinfocardy title="Security & Performance"
+                <x-landing.largeinfocardy title="Security & Performance"
                     desc="Built with robust security and high-performance systems to keep your domains safe and always accessible."
-                    image="images/icon.png"></x-largeinfocardy>
+                    image="images/icon.png"></x-landing.largeinfocardy>
             </div>
         </div>
     </div>
@@ -152,27 +152,27 @@ new class extends Component {
             <div class="grid grid-cols-2 lg:grid-cols-10 gap-y-14 gap-x-10 max-w-7xl w-full">
 
                 <div class="col-span-2 lg:col-span-2 flex justify-center">
-                    <x-featurescard image="images/preorder.png" title="Sistem Pre-Order (Pickup)"
+                    <x-landing.featurescard image="images/preorder.png" title="Sistem Pre-Order (Pickup)"
                         subtitle="Fill short description with 1 short sentence" />
                 </div>
 
                 <div class="col-span-1 lg:col-span-2 flex justify-center">
-                    <x-featurescard image="images/domain.png" title="Domain and Server"
+                    <x-landing.featurescard image="images/domain.png" title="Domain and Server"
                         subtitle="Fill short description with 1 short sentence" />
                 </div>
 
                 <div class="col-span-1 lg:col-span-2 flex justify-center">
-                    <x-featurescard image="images/ui.png" title="Desain Website & UI Profesional"
+                    <x-landing.featurescard image="images/ui.png" title="Desain Website & UI Profesional"
                         subtitle="Fill short description with 1 short sentence" />
                 </div>
 
                 <div class="col-span-1 lg:col-span-2 flex justify-center">
-                    <x-featurescard image="images/website.png" title="Halaman Website Lengkap"
+                    <x-landing.featurescard image="images/website.png" title="Halaman Website Lengkap"
                         subtitle="Fill short description with 1 short sentence" />
                 </div>
 
                 <div class="col-span-1 lg:col-span-2 flex justify-center">
-                    <x-featurescard image="images/data.png" title="Manajemen Produk & Kategori"
+                    <x-landing.featurescard image="images/data.png" title="Manajemen Produk & Kategori"
                         subtitle="Fill short description with 1 short sentence" />
                 </div>
 
@@ -180,22 +180,22 @@ new class extends Component {
                 <div class="hidden lg:block lg:col-span-1"></div>
 
                 <div class="col-span-1 lg:col-span-2 flex justify-center">
-                    <x-featurescard image="images/dashboard.png" title="Dashboard Admin"
+                    <x-landing.featurescard image="images/dashboard.png" title="Dashboard Admin"
                         subtitle="Fill short description with 1 short sentence" />
                 </div>
 
                 <div class="col-span-1 lg:col-span-2 flex justify-center">
-                    <x-featurescard image="images/notification.png" title="Notifikasi Pesanan"
+                    <x-landing.featurescard image="images/notification.png" title="Notifikasi Pesanan"
                         subtitle="Fill short description with 1 short sentence" />
                 </div>
 
                 <div class="col-span-1 lg:col-span-2 flex justify-center">
-                    <x-featurescard image="images/security.png" title="Keamanan & Performa"
+                    <x-landing.featurescard image="images/security.png" title="Keamanan & Performa"
                         subtitle="Fill short description with 1 short sentence" />
                 </div>
 
                 <div class="col-span-1 lg:col-span-2 flex justify-center">
-                    <x-featurescard image="images/support.png" title="Maintenance & Support"
+                    <x-landing.featurescard image="images/support.png" title="Maintenance & Support"
                         subtitle="Fill short description with 1 short sentence" />
                 </div>
 
@@ -206,7 +206,7 @@ new class extends Component {
 
     <section id="service">
         <div class="pt-16">
-            <x-subscriptioncard></x-subscriptioncard>
+            <x-landing.subscriptioncard></x-landing.subscriptioncard>
         </div>
     </section>
 
