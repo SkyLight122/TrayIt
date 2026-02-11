@@ -13,15 +13,21 @@ class Bakery extends Model
 {
     use SoftDeletes;
     protected $fillable = [
+        'user_id',
         'name',
         'email',
         'phone_number',
         'description',
-        'address',
+        'bakery_address_id',
         'bakery_type_id',
-        'order_per_day',
         'pickup_date',
-        'logo_path'
+        'bakery_thumbnail',
+        'logo_path',
+        'order_per_day',
+        'bakery_template_id',
+        'primary_color',
+        'secondary_color',
+        'accent_color'
     ];
 
     public function bakery_type(){
@@ -46,5 +52,13 @@ class Bakery extends Model
 
     public function cake_types(){
         return $this->belongsToMany(CakeType::class, 'bakery_cake_types');
+    }
+
+    public function bakery_addresses(){
+        return $this->hasMany(BakeryAddress::class);
+    }
+
+    public function bakery_template(){
+        return $this->belongsTo(BakeryTemplate::class);
     }
 }

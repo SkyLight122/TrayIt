@@ -18,12 +18,15 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone_number')->unique();
             $table->text('description');
-            $table->text('address');
             $table->foreignId('bakery_type_id')->constrained('bakery_types')->onDelete('restrict');
             $table->dateTime('pickup_date');
             $table->string('bakery_thumbnail')->nullable();
             $table->string('logo_path')->nullable();
             $table->integer('order_per_day');
+            $table->foreignId('bakery_template_id')->constrained('bakery_templates')->onDelete('restrict');
+            $table->string('primary_color')->nullable();
+            $table->string('secondary_color')->nullable();
+            $table->string('accent_color')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
