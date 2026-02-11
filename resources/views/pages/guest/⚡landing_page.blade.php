@@ -211,6 +211,6 @@ new class extends Component {
     </section>
 
     <div class="">
-        <x-landing.footer></x-landing.footer>
+        <x-footer></x-footer>
     </div>
 </div>
