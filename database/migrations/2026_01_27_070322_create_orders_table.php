@@ -21,6 +21,9 @@ return new class extends Migration
                 'Done',
                 'Cancelled'
             ]);
+            $table->integer('total_price');
+            $table->integer('total_hpp');
+            $table->integer('gross_profit');
             $table->timestamps();
             $table->softDeletes();
         });
