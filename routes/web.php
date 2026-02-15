@@ -12,3 +12,4 @@ Route::livewire('/register', 'pages::auth.register')->name('register');
 Route::livewire('/portal', 'pages::preparation.portal')->name('portal');
 Route::livewire ('/landing', 'pages::guest.landing_page') -> name('landing');
 Route::livewire ('/sub', 'pages::guest.slider') -> name('sub');
+Route::livewire ('/home', 'pages::bakery.home') -> name('home');
