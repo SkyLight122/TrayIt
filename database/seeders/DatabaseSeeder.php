@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
+            BakeryTemplateSeeder::class,
             CakeTypeSeeder::class,
             BakeryTypeSeeder::class,
             UserSeeder::class,
@@ -33,7 +34,7 @@ class DatabaseSeeder extends Seeder
             BakeryCakeTypeSeeder::class,
             FinancialCategorySeeder::class,
             UnitSeeder::class,
-            
+
         ]);
     }
 }

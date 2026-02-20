@@ -3,19 +3,32 @@
 use Livewire\Component;
 use Livewire\Attributes\Computed;
 use App\Models\CakeType;
+use App\Models\User;
 
 new class extends Component
 {
+    public $selectedMood;
     #[Computed]
     public function moods(){
         return CakeType::all();
+    }
+
+    public function selectMood(){
+        if(!$this->selectedMood) return;
+
+        $user = User::findOrFail(auth()->user()->id);
+
+        $cake_type = CakeType::where('name', $this->selectedMood)->first();
+
+        $user->cake_type_id = $cake_type->id;
+        $user->save();
     }
 };
 ?>
 
 <div class="bg-[#FFF8F0] min-h-screen lg:py-8 py-20 flex flex-col justify-around">
     
-    <div class="flex items-center lg:justify-between justify-center lg:px-20"">
+    <div class="flex items-center lg:justify-between justify-center lg:px-20">
         <h1 class="text-[#88481E] font-semibold lg:text-5xl text-3xl text-center lg:text-left">What are you <br> craving right now?</h1>
         <div class="hidden lg:flex gap-2">
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
@@ -73,7 +86,7 @@ new class extends Component
     </div>
 
     <div class="flex justify-center">
-        <button id="categoryButton" class="mt-6 w-40 px-6 py-2 border-2 rounded-lg text-center text-[#88481E] border-[#88481E] hover:bg-[#88481E] hover:text-[#FFF8F0]">Cake</button>
+        <button id="categoryButton" wire:click='selectMood' class="mt-6 w-40 px-6 py-2 border-2 rounded-lg text-center text-[#88481E] border-[#88481E] hover:bg-[#88481E] hover:text-[#FFF8F0]">Cake</button>
     </div>
 
 </div>
@@ -144,6 +157,8 @@ new class extends Component
             //ini ambil data nama dari slide yang aktif
             button.textContent = name;
             // ganti teks button dengan slide yang aktif yang diambil dari nilai name
+            @this.set('selectedMood', name);
+            //buat terus update varaibel selectedMood
         }
     }
 });

@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('primary_color')->nullable();
             $table->string('secondary_color')->nullable();
             $table->string('accent_color')->nullable();
-            $table->int('visitors')->default(0);
+            $table->integer('visitors')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
