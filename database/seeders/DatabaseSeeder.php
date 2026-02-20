@@ -30,7 +30,10 @@ class DatabaseSeeder extends Seeder
             BakeryTypeSeeder::class,
             UserSeeder::class,
             BakerySeeder::class,
-            BakeryCakeTypeSeeder::class
+            BakeryCakeTypeSeeder::class,
+            FinancialCategorySeeder::class,
+            UnitSeeder::class,
+            
         ]);
     }
 }
