@@ -12,4 +12,8 @@ class FinancialCategory extends Model
         'category',
         'type'
     ];
+
+    public function operation_financials(){
+        return $this->hasMany(OperationgFinancial::class);
+    }
 }

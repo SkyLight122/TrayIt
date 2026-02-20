@@ -11,6 +11,15 @@ class OperationgFinancial extends Model
     protected $fillable = [
         'bakery_id',
         'amount',
-        'financial_category_id'
+        'financial_category_id',
+        'description'
     ];
+
+    public function bakery(){
+        return $this->belongsTo(Bakery::class);
+    }
+
+    public function financial_category(){
+        return $this->belongsTo(FinancialCategory::class);
+    }
 }

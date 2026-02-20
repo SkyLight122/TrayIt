@@ -46,4 +46,8 @@ class Product extends Model
     {
         return $this->hasMany(ProductVariant::class);
     }
+
+    public function hpps(){
+        return $this->hasOne(HPP::class);
+    }
 }

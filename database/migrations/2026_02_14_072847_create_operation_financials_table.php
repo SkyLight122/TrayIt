@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('bakery_id')->constrained('bakeries')->onDelete('cascade');
             $table->integer('amount');
             $table->foreignId('financial_category_id')->constrained('financial_categories')->onDelete('restrict');
+            $table->text('description');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -2,10 +2,11 @@
 
 namespace App\Models;
 
-use App\Models\Product;
-use App\Models\BakeryType;
-use App\Models\User;
 use App\Models\BakeryImage;
+use App\Models\BakeryType;
+use App\Models\OperationFinancial;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -60,5 +61,13 @@ class Bakery extends Model
 
     public function bakery_template(){
         return $this->belongsTo(BakeryTemplate::class);
+    }
+
+    public function hpps(){
+        return $this->hasMany(HPP::class);
+    }
+
+    public function operation_financials(){
+        return $this->hasMany(OperationFinancial::class);
     }
 }
