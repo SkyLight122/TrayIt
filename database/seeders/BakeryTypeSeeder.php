@@ -14,10 +14,10 @@ class BakeryTypeSeeder extends Seeder
     public function run(): void
     {
         BakeryType::create([
-            'type' => 'everyday'
+            'type' => 'daily'
         ]);
         BakeryType::create([
-            'type' => 'everyweek'
+            'type' => 'week'
         ]);
     }
 }

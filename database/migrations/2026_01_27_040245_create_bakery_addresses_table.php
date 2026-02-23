@@ -17,8 +17,18 @@ return new class extends Migration {
             $table->string('rt');
             $table->string('rw');
             $table->string('post_code');
-            $table->foreignId('city_id')->constrained('cities')->onDelete('restrict');
-            $table->foreignId('province_id')->constrained('provinces')->onDelete('restrict');
+            $table->string('city_id');
+            $table->string('province_id');
+
+            $table->foreign('city_id')
+            ->references('id')
+            ->on('cities')
+            ->onDelete('restrict');
+
+            $table->foreign('province_id')
+            ->references('id')
+            ->on('provinces')
+            ->onDelete('restrict');
 
             $table->timestamps();
             $table->softDeletes();

@@ -12,10 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cities', function (Blueprint $table) {
-            $table->id();
+            $table->string('id')->primary();
+            $table->string('province_id');
             $table->string('city');
             $table->timestamps();
             $table->softDeletes();
+
+            $table->foreign('province_id')
+            ->references('id')
+            ->on('provinces')
+            ->onDelete('restrict');
         });
     }
 

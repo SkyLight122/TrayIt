@@ -1,19 +1,134 @@
 <?php
 
 use Livewire\Component;
+use App\Models\Bakery;
+use App\Models\BakeryAddress;
+use App\Models\City;
+use App\Models\Province;
+use App\Models\BakeryType;
+use Livewire\WithFileUploads;
+use Livewire\Attributes\Computed;
 
 new class extends Component {
+    use WithFileUploads;
     public $step = 1;
+    public $provinces;
+    public $cities = [];
+    public $email, $phone_number, $facebook, $instagram, $x;
+    public $name, $address, $rt, $rw, $post_code, $province, $city;
 
-    public $email, $phone, $facebook, $instagram, $twitter;
-    public $bakery_name, $location, $rt, $rw, $postcode, $province, $city;
+    public function mount(){
+        $this->provinces = Province::all();
+    }
+
+    #[Computed]
+    public function cities($value){
+        $this->city = null;
+        $this->cities = City::where('province_id', $value)->get();
+    }
 
     public function nextStep()
     {
         if ($this->step === 1) {
-            $this->validate([
-                'email' => '',
-                'phone' => '',
+            $this->validate(
+            [
+                'email' => 'required|email|max:255',
+                'phone_number' => 'required|numeric|digits_between:8,13',
+            ],
+            [
+                'email.required' => 'Email is required.',
+                'email.email' => 'Please enter a valid email address.',
+                'email.max' => 'Email may not be greater than 255 characters.',
+                'phone_number.required' => 'Phone number is required.',
+                'phone_number.numeric' => 'Phone number must contain only numbers.',
+                'phone_number.digits_between' => 'Phone number must be between 8 and 13 digits.',
+            ]);
+        }
+        if($this->step === 2){
+            $this->validate(
+            [
+                'name' => 'required|string|max:50',
+                'address' => 'required|string',
+                'rt' => 'required|numeric|digits:3',
+                'rw' => 'required|numeric|digits:3',
+                'post_code' => 'required|numeric|digits:4',
+                'province' => 'required',
+                'city' => 'required',
+            ],
+            [
+                'name.required' => 'Name is required.',
+                'name.string' => 'Name must be a valid text.',
+                'name.max' => 'Name may not be greater than 50 characters.',
+                'address.required' => 'Address is required.',
+                'address.string' => 'Address must be a valid text.',
+                'rt.required' => 'RT is required.',
+                'rt.numeric' => 'RT must contain only numbers.',
+                'rt.digits' => 'RT must be exactly 3 digits.',
+                'rw.required' => 'RW is required.',
+                'rw.numeric' => 'RW must contain only numbers.',
+                'rw.digits' => 'RW must be exactly 3 digits.',
+                'post_code.required' => 'Postal code is required.',
+                'post_code.numeric' => 'Postal code must contain only numbers.',
+                'post_code.digits' => 'Postal code must be exactly 4 digits.',
+                'province.required' => 'Province is required.',
+                'city.required' => 'City is required.',
+            ]);
+        }
+        if($this->step === 3){
+            $this->validate(
+            [
+                'primary_color' => ['required', 'regex:/^#[0-9A-Fa-f]{6}$/'],
+                'secondary_color' => ['required', 'regex:/^#[0-9A-Fa-f]{6}$/'],
+                'accent_color' => ['required', 'regex:/^#[0-9A-Fa-f]{6}$/'],
+                'description' => 'nullable|string|max:500',
+            ],
+            [
+                'primary_color.required' => 'Primary color is required.',
+                'primary_color.regex' => 'Primary color must be a valid hex color code.',
+                'secondary_color.required' => 'Secondary color is required.',
+                'secondary_color.regex' => 'Secondary color must be a valid hex color code.',
+                'accent_color.required' => 'Accent color is required.',
+                'accent_color.regex' => 'Accent color must be a valid hex color code.',
+                'description.string' => 'Description must be valid text.',
+                'description.max' => 'Description may not be greater than 500 characters.',
+            ]);
+
+            if($this->logo){
+                $this->validate(
+                [
+                    'logo' => 'image|mimes:jpg,jpeg,png|max:1024',
+                ],
+                [
+                    'logo.image' => 'The logo must be an image file.',
+                    'logo.mimes' => 'Logo must be a file of type: jpg, jpeg or png.',
+                    'logo.max' => 'Logo size may not be greater than 1MB.',
+                ]);
+                $this->path = $this->logo->store('logo', 'public');
+            }
+            $bakery_type = BakeryType::where('type', $this->preorder)->first();
+            $bakery = Bakery::create([
+                'user_id' => auth()->user()->id,
+                'name' => $this->name,
+                'email' => $this->email,
+                'phone_number' => $this->phone_number,
+                'logo_path' => $this->path,
+                'description' => $this->description,
+                'bakery_type_id' => $bakery_type->id,
+                'primary_color' => $this->primary_color,
+                'secondary_color' => $this->secondary_color,
+                'accent_color' => $this->accent_color,
+                'facebook' => $this->facebook,
+                'instagram' => $this->instagram,
+                'x' => $this->x
+            ]);
+            BakeryAddress::create([
+                'bakery_id' => $bakery->id,
+                'address' => $this->address,
+                'rt' => $this->rt,
+                'rw' =>$this->rw,
+                'post_code' => $this->post_code,
+                'city_id' => $this->city,
+                'province_id' => $this->province
             ]);
         }
         $this->step = min($this->step + 1, 3);
@@ -30,6 +145,7 @@ new class extends Component {
     }
 
     public $logo;
+    public $path = null;
     public $preorder = 'daily';
     public $primary_color = '#cccccc';
     public $secondary_color = '#cccccc';
@@ -79,9 +195,9 @@ new class extends Component {
 
                 <div class="flex flex-col md:flex-row gap-10">
                     <div class="flex-1">
-                        <x-admin.createinput wire:model="phone" title="Contact Number" type="text" image=""
+                        <x-admin.createinput wire:model="phone_number" title="Contact Number" type="text" image=""
                             holder="Phone Number"></x-admin.createinput>
-                        @error('phone')
+                        @error('phone_number')
                             <p class="text-red-500 text-sm">{{ $message }}</p>
                         @enderror
 
@@ -147,8 +263,11 @@ new class extends Component {
                     <p class="text-red-500 text-sm">{{ $message }}</p>
                 @enderror
 
-                <x-admin.createinput wire:model="location" title="Location" type="text" image=""
+                <x-admin.createinput wire:model="address" title="Location" type="text" image=""
                     holder="Jalan melati no. 23"></x-admin.createinput>
+                    @error('address')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
 
 
                 <div class="flex flex-wrap gap-4">
@@ -156,35 +275,52 @@ new class extends Component {
                     <div class="w-24">
                         <x-admin.createinput wire:model="rt" title="RT" holder="003" />
                     </div>
+                    @error('rt')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
 
                     <div class="w-24">
                         <x-admin.createinput wire:model="rw" title="RW" holder="004" />
                     </div>
+                    @error('rw')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
 
                     <div class="w-28">
-                        <x-admin.createinput wire:model="postcode" title="Post Code" holder="7177" />
+                        <x-admin.createinput wire:model="post_code" title="Post Code" holder="7177" />
                     </div>
+                    @error('post_code')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
 
                     <div class="flex-1">
                         <label class="text-blue-600 font-semibold text-sm block mb-1">Province</label>
                         <select wire:model="province"
-                            class="border-2 border-gray-500 rounded-lg pl-4 py-1 placeholder font-normal transition>
+                            class="border-2 border-gray-500 rounded-lg pl-4 py-1 placeholder font-normal transition">
                             <option value="">Select
-                            province</option>
-                            <option>DKI Jakarta</option>
-                            <option>Jawa Barat</option>
+                            Province</option>
+                            @foreach ($provinces as $province)
+                                <option value="{{ $province->id }}">{{ $province->province }}</option>
+                            @endforeach
                         </select>
                     </div>
+                    @error('province')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
 
                     <div class="flex-1">
                         <label class="text-blue-600 font-semibold text-sm block mb-1">City</label>
                         <select wire:model="city"
                             class="border-2 border-gray-500 rounded-lg pl-4 py-1 placeholder font-normal transition">
-                            <option value="">Select city</option>
-                            <option>Jakarta</option>
-                            <option>Bandung</option>
+                            <option value="">Select City</option>
+                            @foreach ($cities as $city)
+                                <option value="{{ $city->id }}">{{ $city->city }}</option>
+                            @endforeach
                         </select>
                     </div>
+                    @error('city')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
 
                 </div>
 
@@ -240,17 +376,21 @@ new class extends Component {
                         <input type="file" class="hidden" wire:model="logo">
                     </label>
                 </div>
+                @error('logo')
+                    <p class="text-red-500 text-sm">{{ $message }}</p>
+                @enderror
 
                 <div class="-mx-24 mt-8">
                     <h2 class="text-blue-600 font-semibold text-xl mb-2">Your Web settings</h2>
                     <p class="text-blue-600 font-semibold mb-2">Pre-order system</p>
                     <div class="flex gap-6 mb-6">
                         <label class="flex items-center gap-2">
-                            <input type="radio" wire:model="preorder" value="daily" class="accent-blue-600">
+                            <input type="radio" name="preorder" wire:model="preorder" value="daily" class="accent-blue-600">
                             Every day
                         </label>
+
                         <label class="flex items-center gap-2">
-                            <input type="radio" wire:model="preorder" value="week" class="accent-blue-600">
+                            <input type="radio" name="preorder" wire:model="preorder" value="week" class="accent-blue-600">
                             Week
                         </label>
                     </div>
@@ -261,15 +401,24 @@ new class extends Component {
                             <input type="color" wire:model="primary_color" class="w-10 h-10 border cursor-pointer">
                             <span>Primary</span>
                         </div>
+                        @error('primary_color')
+                            <p class="text-red-500 text-sm">{{ $message }}</p>
+                        @enderror
                         <div class="flex items-center gap-1">
                             <input type="color" wire:model="secondary_color"
                                 class="w-10 h-10 border cursor-pointer">
                             <span>Secondary</span>
                         </div>
+                        @error('secondary_color')
+                            <p class="text-red-500 text-sm">{{ $message }}</p>
+                        @enderror
                         <div class="flex items-center gap-1">
                             <input type="color" wire:model="accent_color" class="w-10 h-10 border cursor-pointer">
                             <span>Accent</span>
                         </div>
+                        @error('accent_color')
+                            <p class="text-red-500 text-sm">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
             </div>
