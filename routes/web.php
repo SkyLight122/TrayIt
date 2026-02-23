@@ -19,3 +19,4 @@ Route::livewire ('/aboutus', 'pages::bakery.about_us') -> name('aboutus');
 Route::livewire('/dashboard', 'pages::owner_bakery.dashboard') -> name('dashboard');
 Route::livewire('/orders', 'pages::owner_bakery.orders') -> name('orders');
 Route::livewire('/customers', 'pages::owner_bakery.orders') -> name('customers');
+Route::livewire('/createbakery', 'pages::admin.createbakery') -> name('createbakery');
