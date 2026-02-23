@@ -28,6 +28,15 @@
     to {transform: translateX(0);}
 }
 
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE & Edge lama */
+    scrollbar-width: none;     /* Firefox */
+}
+
 /* ===== MONTSERRAT FONT FAMILY ===== */
 
 /* Thin */
