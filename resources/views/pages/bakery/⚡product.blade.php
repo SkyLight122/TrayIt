@@ -76,7 +76,7 @@ new class extends Component
             'variant' => $variant,
             'price' => $price,
             'stock' => $stock
-        ]
+        ];
     }
 
     public function delete($id)

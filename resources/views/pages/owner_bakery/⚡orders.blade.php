@@ -9,9 +9,9 @@ new class extends Component
 {
     public $bakery_id;
 
-    public function mount($id){
-        $this->bakery_id = $id;
-    }
+    // public function mount($id){
+    //     $this->bakery_id = $id;
+    // }
 
     #[Computed]
     public function orders(){
