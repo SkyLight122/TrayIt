@@ -22,12 +22,12 @@ new class extends Component {
 ?>
 
 <div class="bg-[#FFF8F0] min-h-screen overflow-hidden flex justify-center flex-col gap-[140px]">
-    <div class="min-w-screen">
-        <div class="absolute z-20 w-full">
+    <div class="w-full">
+        <div class="relative z-20 w-full">
             <x-bakery.header></x-bakery.header>
         </div>
         
-        <div class="min-h-screen flex items-center justify-start w-full">
+        <div class="min-h-screen pt-40 flex items-start  w-full">
 
             <div class=" flex flex-col gap-[25px] w-full z-10 pl-15">
                 <div class="flex flex-col">
@@ -42,8 +42,8 @@ new class extends Component {
                 <button class="font-[poppins] text-sm bg-[#88481E] py-3 px-15 rounded-3xl self-start text-[#FFF8F0]">Pre-order now</button>
             </div>
 
-            <div class="absolute right-12 top-0 flex items-center z-0">
-                <img class="w-[730px] h-[700px] object-cover rounded-b-2xl" src="/assets/images/bakery/landingpage/sourdough.jpg">
+            <div class="absolute right-7 top-0 flex items-center z-0">
+                <img class="w-[750px] h-[730px] object-cover rounded-b-2xl" src="/assets/images/bakery/landingpage/sourdough.jpg">
             </div>
         </div> 
     </div>
