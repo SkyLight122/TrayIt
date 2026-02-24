@@ -16,6 +16,7 @@ Route::livewire ('/home', 'pages::bakery.home') -> name('home');
 Route::livewire ('/product', 'pages::bakery.product') -> name('product');
 Route::livewire ('/history', 'pages::bakery.history') -> name('history');
 Route::livewire ('/aboutus', 'pages::bakery.about_us') -> name('aboutus');
+Route::livewire('/detail', 'pages::bakery.detail_product') -> name('detail');
 Route::livewire('/dashboard', 'pages::owner_bakery.dashboard') -> name('dashboard');
 Route::livewire('/orders', 'pages::owner_bakery.orders') -> name('orders');
 Route::livewire('/customers', 'pages::owner_bakery.orders') -> name('customers');
