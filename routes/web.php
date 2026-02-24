@@ -20,3 +20,4 @@ Route::livewire('/dashboard', 'pages::owner_bakery.dashboard')->name('dashboard'
 Route::livewire('/orders', 'pages::owner_bakery.orders')->name('orders');
 Route::livewire('/customers', 'pages::owner_bakery.orders')->name('customers');
 Route::livewire('/createbakery', 'pages::admin.createbakery')->name('createbakery');
+Route::livewire('/detail', 'pages::bakery.detail_product') -> name('detail');

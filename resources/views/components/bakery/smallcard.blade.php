@@ -1,11 +1,13 @@
 @props ([
     'photo' => '',
     'name' => '',
-    'price' => ''
+    'price' => '',
+    'id' => 0
 ])
 
-<div class="font-[poppins] w-[180px] flex-shrink-0">
-    <div class="zoom-wrapper">
+<a href="{{ route('detail', $id) }}">
+<div wire:click="{{ route("detail") }}" class=" zoom-wrapper font-[poppins] w-[180px] flex-shrink-0">
+    <div class="image">
     <img class="" src="/assets/images/bakery/{{ $photo }}.jpg">
     </div>
 
@@ -22,9 +24,10 @@
         </div>
     </div>
 </div>
+</a>
 
 <style>
-    .zoom-wrapper {
+    .image {
         width: 180px;
         height: 180px;
         overflow: hidden;
