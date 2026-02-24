@@ -21,8 +21,8 @@ new class extends Component {
         $this->provinces = Province::all();
     }
 
-    #[Computed]
-    public function cities($value){
+    public function updatedProvince($value)
+    {
         $this->city = null;
         $this->cities = City::where('province_id', $value)->get();
     }
@@ -216,7 +216,7 @@ new class extends Component {
                             holder="Optional"></x-admin.createinput>
                     </div>
                     <div class="flex-1">
-                        <x-admin.createinput wire:model="twitter" title="Twitter" type="email" image=""
+                        <x-admin.createinput wire:model="x" title="X" type="email" image=""
                             holder="Optional"></x-admin.createinput>
                     </div>
                 </div>
@@ -295,12 +295,12 @@ new class extends Component {
 
                     <div class="flex-1">
                         <label class="text-blue-600 font-semibold text-sm block mb-1">Province</label>
-                        <select wire:model="province"
+                        <select wire:model.live="province"
                             class="border-2 border-gray-500 rounded-lg pl-4 py-1 placeholder font-normal transition">
                             <option value="">Select
                             Province</option>
-                            @foreach ($provinces as $province)
-                                <option value="{{ $province->id }}">{{ $province->province }}</option>
+                            @foreach ($provinces as $prov)
+                                <option value="{{ $prov->id }}">{{ $prov->province }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -313,8 +313,8 @@ new class extends Component {
                         <select wire:model="city"
                             class="border-2 border-gray-500 rounded-lg pl-4 py-1 placeholder font-normal transition">
                             <option value="">Select City</option>
-                            @foreach ($cities as $city)
-                                <option value="{{ $city->id }}">{{ $city->city }}</option>
+                            @foreach ($cities as $ct)
+                                <option value="{{ $ct->id }}">{{ $ct->city }}</option>
                             @endforeach
                         </select>
                     </div>

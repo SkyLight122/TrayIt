@@ -4,6 +4,7 @@ use Livewire\Component;
 use App\Models\Product;
 use App\Models\Bakery;
 use App\Models\ProductVariant;
+use Livewire\Attributes\Computed;
 
 new class extends Component
 {
@@ -30,6 +31,7 @@ new class extends Component
         $this->bakery_id = $bakery->id;
     }
 
+    #[Computed]
     public function products()
     {
         return Product::where('bakery_id', $this->bakery_id)->get();
