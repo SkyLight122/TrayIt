@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
             BakeryCakeTypeSeeder::class,
             FinancialCategorySeeder::class,
             UnitSeeder::class,
-
+            ProductSeeder::class,
         ]);
     }
 }

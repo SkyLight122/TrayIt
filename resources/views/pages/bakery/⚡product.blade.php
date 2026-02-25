@@ -31,6 +31,21 @@ new class extends Component
         $this->bakery_id = $bakery->id;
     }
 
+    function formatNumber($number)
+    {
+        if ($number >= 1000000) {
+            $value = $number / 1000000;
+            return rtrim(rtrim(number_format($value, 1), '0'), '.') . 'M';
+        }
+
+        if ($number >= 1000) {
+            $value = $number / 1000;
+            return rtrim(rtrim(number_format($value, 1), '0'), '.') . 'K';
+        }
+
+        return $number;
+    }
+
     #[Computed]
     public function products()
     {
@@ -436,27 +451,9 @@ new class extends Component
 
     <div class="flex flex-col justify-center items-center gap-5">
         <div class="flex justify-center gap-8 flex-wrap overflow-hidden pb-5">
-            <x-bakery.smallcard photo="Challah" name="Challah" price="12K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="GlutenSourdough" name="Gluten Free Sourdough" price="30K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="Cheddarbagels" name="Cheddar Jalapeno Bagel" price="15K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="Croissant" name="Croissant" price="20K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="Focaccia" name="Focaccia" price="30K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="Pizza" name="Pizza" price="30K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="VeganBagels" name="Vegan Cream Cheese Bagel" price="23K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="DinnerRolls" name="Dinner Roll" price="8K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="GreekBread" name="Greek Yogurt Bread" price="25K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="TiramisuDonut" name="Tiramisu Donut" price="18K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="Challah" name="Challah" price="12K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="GlutenSourdough" name="Gluten Free Sourdough" price="30K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="Cheddarbagels" name="Cheddar Jalapeno Bagel" price="15K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="Croissant" name="Croissant" price="20K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="Focaccia" name="Focaccia" price="30K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="Pizza" name="Pizza" price="30K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="VeganBagels" name="Vegan Cream Cheese Bagel" price="23K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="DinnerRolls" name="Dinner Roll" price="8K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="GreekBread" name="Greek Yogurt Bread" price="25K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="TiramisuDonut" name="Tiramisu Donut" price="18K"></x-bakery.smallcard>
-            <x-bakery.smallcard photo="Challah" name="Challah" price="12K"></x-bakery.smallcard>
+            @foreach ($this->products as $product)
+                <x-bakery.smallcard photo="Challah" name="{{ $product->name }}" price="{{ $this->formatNumber($product->product_variants->min('price')) }}"></x-bakery.smallcard>
+            @endforeach
         </div>
     </div>
 
