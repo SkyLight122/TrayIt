@@ -4,7 +4,7 @@
     'chartId' => 'salesChart',
 ])
 
-<div class="flex flex-col rounded-xl w-[480px] h-54 p-4 bg-white shadow-xl/10">
+<div class="flex flex-col rounded-xl w-[480px] h-54 p-4 bg-white custom-shadow">
 
     <div class="flex flex-row">
         <img src="images/salesicon.png" class="w-8 h-8 self-center m-2">
@@ -13,7 +13,7 @@
             <h1 class="font-semibold pl-1">{{ $counter }}</h1>
         </div>
     </div>
-    
+
     <div class="flex-1" wire:ignore>
         <canvas id="{{ $chartId }}"></canvas>
     </div>

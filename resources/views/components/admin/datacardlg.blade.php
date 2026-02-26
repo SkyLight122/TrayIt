@@ -6,7 +6,7 @@
 ])
 
 
-<div class="flex flex-col rounded-xl w-84 h-22 p-4 bg-white shadow-xl/10">
+<div class="flex flex-col rounded-xl w-84 h-22 p-4 bg-white custom-shadow">
     <div class="flex flex-row">
         <h1 class="text-blue-500 font-semibold">{{ $title }}</h1>
         <h1 class="text-gray-400 font-light pl-1">{{ $title2 }}</h1>

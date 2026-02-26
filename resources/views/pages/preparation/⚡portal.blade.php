@@ -170,7 +170,7 @@ new class extends Component {
 </div>
 
 <script>
-    new Swiper('.iklan-swiper', {
+    new Swiper('.iklan-swiper'  , {
         loop: true,
         effect: 'fade',
         speed: 2000,
