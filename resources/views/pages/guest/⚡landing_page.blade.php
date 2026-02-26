@@ -1,9 +1,15 @@
- <?php
+<?php
 
 use Livewire\Component;
+use App\Models\Bakery;
+use Livewire\Attributes\Computed;
 
 new class extends Component {
-    //
+    
+    #[Computed]
+    public function bakeries(){
+        return Bakery::all();
+    }
 };
 ?>
 <div>
