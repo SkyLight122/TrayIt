@@ -4,7 +4,7 @@
 ])
 
 
-<div class="flex flex-col rounded-xl w-172 h-54 p-4 bg-white shadow-xl/10">
+<div class="flex flex-col rounded-xl w-172 h-54 p-4 bg-white custom-shadow">
     <div class="flex flex-row">
         <h1 class="text-black font-semibold">{{ $title }}</h1>
     </div>
