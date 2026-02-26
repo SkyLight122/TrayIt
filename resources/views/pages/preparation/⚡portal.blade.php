@@ -32,15 +32,6 @@ new class extends Component {
     #[Computed]
     public function bakeries()
     {
-        // return Bakery::where('name', 'like', "%{$this->search}%")
-        //             ->orWhere('email', 'like', "%{$this->search}%")
-        //             ->orWhere('phone_number', 'like', "%{$this->search}%")
-        //             ->when($this->cake_type, function($query){
-        //                 $query->whereHas('cake_types', function($q){
-        //                     $q->where('cake_type_id', CakeType::where('name', $this->cake_type)->get('id'));
-        //                 });
-        //             })
-        //             ->paginate(3);
         return Bakery::where(function ($q) {
             $q->where('name', 'like', "%{$this->search}%")
                 ->orWhere('email', 'like', "%{$this->search}%")
@@ -51,7 +42,7 @@ new class extends Component {
                     $q->where('cake_types.name', $this->cake_type);
                 });
             })
-            ->paginate(3);
+            ->paginate(10);
     }
 };
 ?>

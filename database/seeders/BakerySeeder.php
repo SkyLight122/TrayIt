@@ -17,7 +17,7 @@ class BakerySeeder extends Seeder
             'description' => 'Bakery rumahan dengan roti fresh setiap pagi.',
             'bakery_type_id' => 1,
             'pickup_date' => '2026-05-01 07:30:00',
-            'bakery_thumbnail' => 'portal/bakery/Bakery1.jpg',
+            'bakery_thumbnail' => 'portal/bakery/Bakery1.png',
             'logo_path' => null,
             'order_per_day' => 15,
             'bakery_template_id' => 1,
