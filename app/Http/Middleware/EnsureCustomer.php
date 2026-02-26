@@ -16,7 +16,7 @@ class EnsureCustomer
     public function handle(Request $request, Closure $next): Response
     {
         $bakery_id = (int) $request->route('bakery');
-        abort_unless($request->user()->isCustomer($bakery_id), 403);
+        abort_unless($request->user()?->isCustomer($bakery_id), 403);
         return $next($request);
     }
 }

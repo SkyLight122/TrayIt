@@ -16,7 +16,7 @@ class EnsureBakeryOwner
     public function handle(Request $request, Closure $next): Response
     {
         $bakery_id = $request->route('bakery');
-        abort_unless($request->user()->isBakeryOwner($bakery_id), 403);
+        abort_unless($request->user()?->isBakeryOwner($bakery_id), 403);
         return $next($request);
     }
 }
