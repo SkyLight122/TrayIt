@@ -32,10 +32,11 @@ new class extends Component {
                         + 3 mo. free
                     </p>
 
-                    <button
-                        class="mt-5 bg-[#1A76FF] hover:bg-blue-600 transition rounded-xl px-6 py-3 text-sm sm:text-base md:text-lg shadow-lg cursor-pointer">
-                        See Offer
-                    </button>
+                    <a href="#service">
+                        <button class="mt-5 bg-[#1A76FF] hover:bg-blue-600 transition rounded-xl px-6 py-3 text-sm sm:text-base md:text-lg shadow-lg cursor-pointer">
+                            See Offer
+                        </button>
+                    </a>
 
                 </div>
             </div>
