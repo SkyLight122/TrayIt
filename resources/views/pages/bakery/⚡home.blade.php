@@ -55,9 +55,6 @@ new class extends Component {
                     tangy flavor that keeps you coming back for more.
                 </p>
 
-                <a href="{{ route('product') }}">
-                    <button class="font-[poppins] text-sm bg-[#88481E] py-3 px-15 rounded-3xl self-start text-[#FFF8F0]">Pre-order now</button>
-                </a>
                  <a href="{{ route('product') }}">
                     <button class="cursor-pointer font-[poppins] text-sm bg-[#88481E] py-3 px-15 rounded-full self-start text-[#FFF8F0]">Pre-order now</button>
                 </a>
@@ -102,7 +99,7 @@ new class extends Component {
         <div class="flex justify-center ">
             <a href="{{ route('product') }}">
                 <button class="cursor-pointer font-[poppins] flex text-sm bg-[#88481E] py-3 px-15 rounded-3xl self-start text-[#FFF8F0]">
-                    Discover all menus <p class="pt-[1px] pl-6">></p>  </button>
+                    Discover all menus </button>
             </a>
         </div>
     </div>
@@ -174,13 +171,13 @@ new class extends Component {
 
                     <div class="relative font-[poppins]">
                         <input type="email" placeholder="Enter your email" wire:model="email" id="email"
-                        class="w-[700px] h-[60px] px-10 text-[18px] rounded-full bg-[#FFF8F0] text-black">
+                        class="w-[700px] h-[60px] px-10 text-[18px] pr-65 rounded-full bg-[#FFF8F0] text-black ">
 
                         <button class="cursor-pointer w-[215px] h-[60px] text-[20px] absolute right-0 rounded-r-full bg-[#88481E] text-[#FFF8F0]">SUBMIT →</button>
                     </div>
 
                     <div class="flex justify-center items-center gap-[30px]">
-                        <input type="checkbox" class="w-4 h-4 border-0 accent-[#FFF8F0] bg-[#FFF08F0]">
+                        <input type="checkbox" class="w-4 h-4 border-0 accent-[#FFF8F0] bg-[#FFF08F0] cursor-pointer">
                         <label class="text-[#FFF8F0] font-[poppins] ">I confirm I want to recieve the Bright Place newsletter</label>
                     </div>
                 </div>

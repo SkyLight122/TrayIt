@@ -157,7 +157,7 @@ new class extends Component {
             <div class="border border-[#88481E] rounded-full w-80 h-fit flex items-center px-5">
                 <img class="absolute size-5" src="{{ asset('assets/images/bakery/product/Search.png') }}">
                 <input id="search" type="text" placeholder="Search our menu..."
-                    class="shadow-none outline-none h-10 w-full ml-10 pb-0.5 text-[#88481E]" />
+                    class="shadow-none outline-none h-10 w-full ml-10 pb-0.5  text-[#88481E]" />
             </div>
 
 
@@ -176,7 +176,7 @@ new class extends Component {
     <div class="flex justify-end z-20">
         <div class="fixed top-0 right-0 m-3 bg-[#FFF8F0] h-[97vh] w-120 rounded-2xl
             transform transition-transform duration-300 z-50
-            {{ $showCart ? 'translate-x-0' : 'translate-x-full' }}">
+            {{ $showCart ? 'translate-x-0' : 'translate-x-200' }}">
 
 
             <div class="flex py-8 px-10 justify-between">
@@ -421,7 +421,7 @@ new class extends Component {
                 </div>
             </div>
 
-            <div class="py-8 px-10 ">
+            <div class="py-1 px-10 ">
                 <div class="flex justify-between items-center">
                     <p class="text-[18px] font-medium text-[#88481E]">Subtotal</p>
                     <p class="text-[18px] font-medium text-[#88481E]">Rp 84.000</p>
@@ -461,13 +461,3 @@ new class extends Component {
 
 </div>
 
-<style>
-    .scroll-hide::-webkit-scrollbar {
-        display: none;
-    }
-
-    .scroll-hide {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-</style>

@@ -11,10 +11,10 @@
 
     <div class="flex items-center py-3">
         <div class="pr-2 px-5">
-            <p class="text-[18px] text-[#88481E] w-25 line-clamp-2">{{ $name }}</p>
+            <p class="text-[20px] text-[#88481E] w-25 line-clamp-2">{{ $name }}</p>
         </div>
 
-        <div class="border-l border-[#D5A789] h-10"></div>
+        <div class="border-l border-[#D5A789] h-12"></div>
 
         <div class="pl-6">
             <p class="text-[#88481E] text-xl font-semibold">Rp {{ $price }}</p>
