@@ -13,6 +13,21 @@ new class extends Component {
         $this->bakery = $bakery;
     }
 
+    function formatNumber($number)
+    {
+        if ($number >= 1000000) {
+            $value = $number / 1000000;
+            return rtrim(rtrim(number_format($value, 1), '0'), '.') . 'M';
+        }
+
+        if ($number >= 1000) {
+            $value = $number / 1000;
+            return rtrim(rtrim(number_format($value, 1), '0'), '.') . 'K';
+        }
+
+        return $number;
+    }
+
     #[Computed]
     public function products()
     {
@@ -39,7 +54,9 @@ new class extends Component {
                     delivering a crispy golden crust, a soft airy crumb, and a rich, 
                     tangy flavor that keeps you coming back for more.
                 </p>
-                <button class="font-[poppins] text-sm bg-[#88481E] py-3 px-15 rounded-3xl self-start text-[#FFF8F0]">Pre-order now</button>
+                <a href="{{ route('product') }}">
+                    <button class="font-[poppins] text-sm bg-[#88481E] py-3 px-15 rounded-3xl self-start text-[#FFF8F0]">Pre-order now</button>
+                </a>
             </div>
 
             <div class="absolute right-7 top-0 flex items-center z-0">
@@ -79,8 +96,10 @@ new class extends Component {
         </div>
 
         <div class="flex justify-center ">
-        <button class="font-[poppins] flex text-sm bg-[#88481E] py-3 px-15 rounded-3xl self-start text-[#FFF8F0]">
-            Discover all menus <p class="pt-[1px] pl-6">></p>  </button>
+            <a href="{{ route('product') }}">
+                <button class="font-[poppins] flex text-sm bg-[#88481E] py-3 px-15 rounded-3xl self-start text-[#FFF8F0]">
+                    Discover all menus <p class="pt-[1px] pl-6">></p>  </button>
+            </a>
         </div>
     </div>
 
