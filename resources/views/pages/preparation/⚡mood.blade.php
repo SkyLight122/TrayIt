@@ -5,16 +5,18 @@ use Livewire\Attributes\Computed;
 use App\Models\CakeType;
 use App\Models\User;
 
-new class extends Component
-{
+new class extends Component {
     public $selectedMood;
     #[Computed]
-    public function moods(){
+    public function moods()
+    {
         return CakeType::all();
     }
 
-    public function selectMood(){
-        if(!$this->selectedMood) return;
+    public function selectMood()
+    {
+        if (!$this->selectedMood)
+            return;
 
         $user = User::findOrFail(auth()->user()->id);
 
@@ -27,37 +29,38 @@ new class extends Component
 ?>
 
 <div class="bg-[#FFF8F0] min-h-screen lg:py-8 py-20 flex flex-col justify-around">
-    
+
     <div class="flex items-center lg:justify-between justify-center lg:px-20">
-        <h1 class="text-[#88481E] font-semibold lg:text-5xl text-3xl text-center lg:text-left">What are you <br> craving right now?</h1>
+        <h1 class="text-[#88481E] font-semibold lg:text-5xl text-3xl text-center lg:text-left">What are you <br> craving
+            right now?</h1>
         <div class="hidden lg:flex gap-2">
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('assets/images/moodquiz/Cake.png') }}" class="w-9 h-12"/>
-            </div>
-            
-            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('assets/images/moodquiz/Bread.png') }}" class="w-12 h-12"/>
+                <img src="{{ asset('assets/images/moodquiz/Cake.png') }}" class="w-9 h-12" />
             </div>
 
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('assets/images/moodquiz/Pastry.png') }}" class="w-12 h-12"/>
+                <img src="{{ asset('assets/images/moodquiz/Bread.png') }}" class="w-12 h-12" />
             </div>
 
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('assets/images/moodquiz/Cookie.png') }}" class="w-12 h-13"/>
+                <img src="{{ asset('assets/images/moodquiz/Pastry.png') }}" class="w-12 h-12" />
             </div>
 
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('assets/images/moodquiz/Dessert.png') }}" class="w-12 h-12"/>
+                <img src="{{ asset('assets/images/moodquiz/Cookie.png') }}" class="w-12 h-13" />
             </div>
-            
+
             <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
-                <img src="{{ asset('assets/images/moodquiz/Savory.png') }}" class="w-12 h-12"/>
+                <img src="{{ asset('assets/images/moodquiz/Dessert.png') }}" class="w-12 h-12" />
+            </div>
+
+            <div class="w-17 h-17 rounded-full border-3 border-amber-800 bg-[#FFF8F0] flex items-center justify-center">
+                <img src="{{ asset('assets/images/moodquiz/Savory.png') }}" class="w-12 h-12" />
             </div>
         </div>
     </div>
 
-    <div class="swiper w-full">
+    <div class="swiper mySwiper w-full" wire:ignore>
         <div class="swiper-wrapper">
             <div class="swiper-slide" data-name="Cake">
                 <img src="{{ asset('assets/images/moodquiz/Cake.png') }}" class="lg:w-70 w-50 mx-auto">
@@ -86,20 +89,21 @@ new class extends Component
     </div>
 
     <div class="flex justify-center">
-        <button id="categoryButton" wire:click='selectMood' class="mt-6 w-40 px-6 py-2 border-2 rounded-lg text-center text-[#88481E] border-[#88481E] hover:bg-[#88481E] hover:text-[#FFF8F0]">Cake</button>
+        <button id="categoryButton" wire:click='selectMood'
+            class="mt-6 w-40 px-6 py-2 border-2 rounded-lg text-center text-[#88481E] border-[#88481E] hover:bg-[#88481E] hover:text-[#FFF8F0]">Cake</button>
     </div>
 
 </div>
 
 <style>
     .swiper-slide-active {
-  filter: blur(0x);
-}
+        filter: blur(0x);
+    }
 
     .swiper-pagination-bullet,
     .swiper-pagination-bullet-active {
-    background: #88481E;
-}
+        background: #88481E;
+    }
 
     .swiper-slide {
         border-radius: 10px;
@@ -107,7 +111,7 @@ new class extends Component
         flex-direction: column;
         justify-content: end;
         margin-top: 50px;
-}
+    }
 </style>
 
 <script>
@@ -115,7 +119,7 @@ new class extends Component
     //Cari elemen HTML yang mempunyai id = categoryButton
 
 
-   var swiper = new Swiper(".swiper", {
+    var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         //ini untuk effect jadi slide tengah paling fokus dan kirikanan jadi miring kebelakang
         grabCursor: true,
@@ -143,27 +147,24 @@ new class extends Component
         },
         loop: true,
 
-    breakpoints: {
-        768: {
-            slidesPerView: 2,
-        }
-    },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            }
+        },
 
-    on: {
-        slideChange: function () {
-            const activeSlide = this.slides[this.activeIndex];
-            // ambil slide yang sedang aktif
-            const name = activeSlide.dataset.name;
-            //ini ambil data nama dari slide yang aktif
-            button.textContent = name;
-            // ganti teks button dengan slide yang aktif yang diambil dari nilai name
-            @this.set('selectedMood', name);
-            //buat terus update varaibel selectedMood
+        on: {
+            slideChange: function () {
+                const activeSlide = this.slides[this.activeIndex];
+                // ambil slide yang sedang aktif
+                const name = activeSlide.dataset.name;
+                //ini ambil data nama dari slide yang aktif
+                button.textContent = name;
+                // ganti teks button dengan slide yang aktif yang diambil dari nilai name
+                Livewire.find(document.querySelector('[wire\\:id]').getAttribute('wire:id'))
+                    .set('selectedMood', name);
+                //buat terus update varaibel selectedMood
+            }
         }
-    }
-});
+    });
 </script>
-
-
-
-
