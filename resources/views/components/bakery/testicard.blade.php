@@ -13,10 +13,10 @@
 
     <div class="flex flex-col justify-center items-center w-[690px] h-[357px] gap-[20px]">
         <div>
-        <p class="w-[600px] font-medium text-[20px] font-[poppins]">“{{ $testi }}”</p>
+        <p class="w-[600px] font-medium text-[#88481E] text-[20px] font-[poppins]">“{{ $testi }}”</p>
         </div>
 
-        <div class="border-t border-1 border-[#D5A789] w-[595px]"></div>
+        <div class="border-t border-1 border-[#C68B65] w-[595px]"></div>
         
         <div class="w-[587px] h-[70px] flex items-start">
             <div class="flex items-center justify-center gap-5">
@@ -24,9 +24,9 @@
                     <img class="size-[70px] rounded-full object-cover" src="/assets/images/bakery/{{ $profile }}.jpg">
                 </div>
 
-                <div class="font-[poppins]">
-                    <p class="font-medium text-[20px]">{{ $username }} </p>
-                    <p class="font-medium text-[20px] text-[#999999]"> Happy Customer </p>
+                <div class="font-[poppins] ">
+                    <p class="font-medium text-[#522C12] text-[20px]">{{ $username }} </p>
+                    <p class=" text-[20px] text-[#905A37]"> @tiff </p>
                 </div>
             </div>
         </div>

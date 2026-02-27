@@ -6,8 +6,7 @@ use App\Models\Bakery;
 use App\Models\ProductVariant;
 use Livewire\Attributes\Computed;
 
-new class extends Component
-{
+new class extends Component {
     public $name, $bakery_id, $price, $stock, $description, $cake_type_id;
     public $preorder = false;
     public $images = [];
@@ -52,11 +51,13 @@ new class extends Component
         return Product::where('bakery_id', $this->bakery_id)->get();
     }
 
-    public function selectIndex($index){
+    public function selectIndex($index)
+    {
         $this->selectedIndex = $index;
     }
 
-    public function create(){
+    public function create()
+    {
         $this->validate([
             'name' => 'required|max:255|string',
             'description' => 'required|string|max:1000',
@@ -78,7 +79,7 @@ new class extends Component
             'cake_type_id' => $this->cake_type_id,
             'preorder' => false
         ]);
-        foreach($this->variants as $variant){
+        foreach ($this->variants as $variant) {
             ProductVariant::create([
                 'product_id' => $product->id,
                 'variant' => $variant->variant,
@@ -88,7 +89,8 @@ new class extends Component
         }
     }
 
-    public function addVariant($variant, $price, $stock){
+    public function addVariant($variant, $price, $stock)
+    {
         $this->variants[] = [
             'variant' => $variant,
             'price' => $price,
@@ -115,37 +117,37 @@ new class extends Component
             </div>
 
             <div
-                class="hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
+                class="cursor-pointer hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
                 <p class="hover:text-[#FFF8F0] text-[#88481E] px-5 py-1.5">All</p>
             </div>
 
             <div
-                class="hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
+                class="cursor-pointer hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
                 <p class="hover:text-[#FFF8F0] text-[#88481E] px-5 py-1.5">Cake</p>
             </div>
 
             <div
-                class="hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
+                class="cursor-pointer hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
                 <p class="hover:text-[#FFF8F0] text-[#88481E] px-5 py-1.5">Bread</p>
             </div>
 
             <div
-                class="hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
+                class="cursor-pointer hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
                 <p class="hover:text-[#FFF8F0] text-[#88481E] px-5 py-1.5">Pastry</p>
             </div>
 
             <div
-                class="hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
+                class="cursor-pointer hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
                 <p class="hover:text-[#FFF8F0] text-[#88481E] px-5 py-1.5">Cookies</p>
             </div>
 
             <div
-                class="hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
+                class="cursor-pointer hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
                 <p class="hover:text-[#FFF8F0] text-[#88481E] px-5 py-1.5">Dessert</p>
             </div>
 
             <div
-                class="hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
+                class="cursor-pointer hover:bg-[#88481E] border-1 border-[#88481E] rounded-full flex justify-center items-center transition duration-200">
                 <p class="hover:text-[#FFF8F0] text-[#88481E] px-5 py-1.5">Savory</p>
             </div>
         </div>
@@ -158,29 +160,18 @@ new class extends Component
                     class="shadow-none outline-none h-10 w-full ml-10 pb-0.5 text-[#88481E]" />
             </div>
 
-            {{-- <div class="flex justify-center">
-                <div class="">
-                    <div class="absolute py-4  px-8 ">
-                        <img class="size-3" src="/assets/images/bakery/product/Down.png">
-                    </div>
-                    <select id="categoryFilter"
-                        class="px-10 pl-15 py-2 appearance-none text-center rounded-full border border-[#88481E] bg-[#88481E] text-[#FFF8F0]">
-                        <option value="all">All Categories</option>
-                        <option value="bread">Bread</option>
-                        <option value="pastry">Pastry</option>
-                        <option value="cake">Cake</option>
-                    </select>
+
+            <div wire:click="toggleCart">
+                <div class="bg-[#88481E] w-15 h-10.5 flex justify-center items-center rounded-full cursor-pointer">
+                    <button>
+                        <img class="size-6 cursor-pointer" src="/assets/images/bakery/product/cart.png">
+                    </button>
                 </div>
-            </div> --}}
-
-
-            <div class="bg-[#88481E] w-15 h-10.5 flex justify-center items-center rounded-full cursor-pointer">
-                <button wire:click="toggleCart">
-                    <img class="size-6" src="/assets/images/bakery/product/cart.png">
-                </button>
             </div>
         </div>
     </div>
+
+
 
     <div class="flex justify-end z-20">
         <div class="fixed top-0 right-0 m-3 bg-[#FFF8F0] h-[97vh] w-120 rounded-2xl
@@ -451,11 +442,18 @@ new class extends Component
 
     <div class="flex flex-col justify-center items-center gap-5">
         <div class="flex justify-center gap-8 flex-wrap overflow-hidden pb-5">
-            @foreach ($this->products as $product)
-                <x-bakery.smallcard photo="Challah" name="{{ $product->name }}" price="{{ $this->formatNumber($product->product_variants->min('price')) }}"></x-bakery.smallcard>
-            @endforeach
+            @forelse ($this->products as $product)
+                <x-bakery.smallcard photo="Challah" name="{{ $product->name }}"
+                    price="{{ $this->formatNumber($product->product_variants->min('price')) }}"></x-bakery.smallcard>
+            @empty
+                <div class="flex flex-col min-h-[70vh] justify-center items-center">
+                    <img src="/assets/images/bakery/product/sad.png">
+                    <p class="pt-5 text-xl text-[#C68B65]">No products available right now :(</p>
+                </div>
+            @endforelse
         </div>
     </div>
+
 
     <div>
         <x-bakery.footer></x-bakery.footer>
