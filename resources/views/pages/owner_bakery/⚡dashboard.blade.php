@@ -5,13 +5,77 @@ use Livewire\Attributes\Computed;
 use App\Models\Product;
 use App\Models\Order;
 use App\Models\User;
+use Carbon\Carbon;
 
 new class extends Component {
     public $total_menu, $bakery_id;
+    public $labels = [];
+    public $values = [];
+    public $filter = 'week';
 
     // public function mount($bakery_id){
     //     $this->bakery_id = $bakery_id;
     // }
+
+    public function loadFilter(){
+        $this->labels = [];
+        $this->values = [];
+
+        if($this->filter === 'week'){
+            $this->loadWeekly();
+        }
+        if($this->filter === 'month'){
+            $this->loadMonthly();
+        }
+        if($this->filter === 'year'){
+            $this->loadYearly();
+        }
+
+    }
+
+    public function loadWeekly(){
+        $start = Carbon::now()->startOfWeek();
+        $end = Carbon::now()->endOfWeek();
+
+        $orders = Order::whereBetween('created_at', [$start, $end])->get()->groupBy(fn($item) => Carbon::parse($item->created_at)->format('D'));
+        $days = ['Mon', 'Tue', "Wed", 'Thu', 'Fri', 'Sat', 'Sun'];
+
+        foreach($days as $day){
+            $this->labels = $day;
+            $this->values = $orders[$day]->sum('total_price')??0;
+        }
+    }
+    public function loadMonthly(){
+        $start = Carbon::now()->startOfMonth();
+            $end = Carbon::now()->endOfMonth();
+
+            $orders = Order::whereBetween('created_at', [$start, $end])->get();
+            $this->labels = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
+            $this->values = [0, 0, 0, 0];
+            foreach($orders as $order){
+                $day = Carbon::parse($order->created_at)->day;
+                if ($day <= 7) {
+                    $this->values[0] += $order->total_price;
+                } elseif ($day <= 14) {
+                    $this->values[1] += $order->total_price;
+                } elseif ($day <= 21) {
+                    $this->values[2] += $order->total_price;
+                } else {
+                    $this->values[3] += $order->total_price;
+                }
+            }
+    }
+    public function loadYearly(){
+        $year = Carbon::now()->year;
+        $orders = Order::whereYear('created_at', $year)->get()->groupBy(fn($item) => Carbon::parse($item->created_at)->format('M'));
+
+        $months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+        foreach ($months as $month) {
+            $this->labels[] = $month;
+            $this->values[] = $orders[$month]->sum('total_price') ?? 0;
+        }
+    }
 
     #[Computed]
     public function total_menu()

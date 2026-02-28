@@ -11,10 +11,12 @@
         </nav>
 
         <div class="flex items-center justify-end gap-3">
-            <button
-                class="hidden md:block border-2 bg-[#1A76FF] text-white rounded-xl px-5 h-11 text-sm sm:text-base cursor-pointer hover:bg-blue-600">
-                My Account
-            </button>
+            <a href="{{ route('login') }}">
+                <button
+                    class="hidden md:block border-2 bg-[#1A76FF] text-white rounded-xl px-5 h-11 text-sm sm:text-base cursor-pointer hover:bg-blue-600">
+                    My Account
+                </button>
+            </a>
 
             <button id="menuBtn" class="md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-500" fill="none" viewBox="0 0 24 24"

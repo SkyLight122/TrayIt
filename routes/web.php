@@ -51,4 +51,4 @@ Route::livewire('/', 'pages::guest.landing_page');
 Route::livewire('/home', 'pages::bakery.home')->name('home');
 Route::livewire('/sub', 'pages::guest.slider')->name('sub');
 Route::livewire('/logout', 'pages::owner_bakery.hpp') -> name('logout');
-Route::livewire('/hpp/{id}', 'pages::owner_bakery.hpp') -> name('hpp');
+Route::livewire('/hpp', 'pages::owner_bakery.hpp') -> name('hpp');

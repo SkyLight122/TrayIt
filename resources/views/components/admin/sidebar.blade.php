@@ -23,7 +23,7 @@
             </span>
         </a>
 
-        <a href="{{route('products')}}" class="group hover:bg-blue-500 rounded-xl my-2 pt-1 pb-1 w-[90%] mx-auto flex flex-row items-center {{ request()->routeIs('products') ? 'bg-blue-500' : 'hover:bg-blue-500' }}">
+        <a href="{{route('product')}}" class="group hover:bg-blue-500 rounded-xl my-2 pt-1 pb-1 w-[90%] mx-auto flex flex-row items-center {{ request()->routeIs('products') ? 'bg-blue-500' : 'hover:bg-blue-500' }}">
             <img src="images/producticon.png" class="w-6 h-6 m-1 ml-4 group-hover:brightness-0 group-hover:invert {{request()->routeIs('products') ? 'brightness-0 invert' : 'group-hover:brightness-0 group-hover:invert'}}">
             <span class="text-xl pl-4 text-gray-500 hover:text-white {{ request()->routeIs('products') ? 'text-white' : 'text-gray-500 group-hover:text-white' }}">
                 Products
