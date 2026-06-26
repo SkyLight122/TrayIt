@@ -6,7 +6,7 @@
     'full' => false,
 ])
 
-<div class="{{ $full ? 'w-full' : '' }}">
+<div class="w-full">
     <label class="text-blue-600 font-semibold text-sm mb-1 block">
         {{ $title }}
     </label>

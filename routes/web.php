@@ -44,9 +44,7 @@ Route::livewire('/createbakery', 'pages::admin.createbakery')->name('createbaker
 Route::livewire('/login', 'pages::auth.login')->name('login');
 Route::livewire('/register', 'pages::auth.register')->name('register');
 Route::livewire('/', 'pages::guest.landing_page');
-Route::livewire('/sub', 'pages::guest.slider')->name('sub');
 
-
-Route::livewire('/products', 'pages::bakery.product') -> name('products');
+Route::livewire('/products', 'pages::owner_bakery.pro') -> name('products');
 Route::livewire('/hpp', 'pages::owner_bakery.hpp') -> name('hpp');
-Route::livewire('/logout', 'pages::owner_bakery.hpp') -> name('logout');
+Route::livewire('/logout', 'pages::owner_bakery.logout') -> name('logout');
